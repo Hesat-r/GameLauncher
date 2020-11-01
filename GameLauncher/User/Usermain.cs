@@ -16,5 +16,19 @@ namespace GameLauncher.User
         {
             InitializeComponent();
         }
+
+        private void pbxuserspielen_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Userspiele userspiele = new Userspiele();
+            userspiele.Show();
+        }
+
+        private void pbxuserausloggen_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login login = new Login();
+            login.Show();
+        }
     }
 }

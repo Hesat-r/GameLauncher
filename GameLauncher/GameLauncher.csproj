@@ -46,11 +46,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\AdminBenutzer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminBenutzer.Designer.cs">
+      <DependentUpon>AdminBenutzer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Admineinstellungen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Admineinstellungen.Designer.cs">
+      <DependentUpon>Admineinstellungen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Adminmain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Admin\Adminmain.Designer.cs">
       <DependentUpon>Adminmain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Adminspiele.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Adminspiele.Designer.cs">
+      <DependentUpon>Adminspiele.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -72,8 +90,23 @@
     <Compile Include="User\Usermain.Designer.cs">
       <DependentUpon>Usermain.cs</DependentUpon>
     </Compile>
+    <Compile Include="User\Userspiele.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\Userspiele.Designer.cs">
+      <DependentUpon>Userspiele.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Admin\AdminBenutzer.resx">
+      <DependentUpon>AdminBenutzer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Admineinstellungen.resx">
+      <DependentUpon>Admineinstellungen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin\Adminmain.resx">
       <DependentUpon>Adminmain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Adminspiele.resx">
+      <DependentUpon>Adminspiele.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -93,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="User\Usermain.resx">
       <DependentUpon>Usermain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\Userspiele.resx">
+      <DependentUpon>Userspiele.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

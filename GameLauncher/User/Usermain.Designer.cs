@@ -33,14 +33,14 @@
             this.lblgame = new System.Windows.Forms.Label();
             this.pnluserspielen = new System.Windows.Forms.Panel();
             this.lbluserspielen = new System.Windows.Forms.Label();
-            this.pbxuserspielen = new System.Windows.Forms.PictureBox();
             this.pnluserausloggen = new System.Windows.Forms.Panel();
-            this.pbxuserausloggen = new System.Windows.Forms.PictureBox();
             this.lbluserausloggen = new System.Windows.Forms.Label();
+            this.pbxuserausloggen = new System.Windows.Forms.PictureBox();
+            this.pbxuserspielen = new System.Windows.Forms.PictureBox();
             this.pnluserspielen.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxuserspielen)).BeginInit();
             this.pnluserausloggen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxuserausloggen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxuserspielen)).BeginInit();
             this.SuspendLayout();
             // 
             // lblLauncher
@@ -84,17 +84,6 @@
             this.lbluserspielen.Text = "Spielen";
             this.lbluserspielen.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pbxuserspielen
-            // 
-            this.pbxuserspielen.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbxuserspielen.Image = ((System.Drawing.Image)(resources.GetObject("pbxuserspielen.Image")));
-            this.pbxuserspielen.Location = new System.Drawing.Point(3, 3);
-            this.pbxuserspielen.Name = "pbxuserspielen";
-            this.pbxuserspielen.Size = new System.Drawing.Size(339, 273);
-            this.pbxuserspielen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbxuserspielen.TabIndex = 1;
-            this.pbxuserspielen.TabStop = false;
-            // 
             // pnluserausloggen
             // 
             this.pnluserausloggen.Controls.Add(this.pbxuserausloggen);
@@ -103,17 +92,6 @@
             this.pnluserausloggen.Name = "pnluserausloggen";
             this.pnluserausloggen.Size = new System.Drawing.Size(345, 332);
             this.pnluserausloggen.TabIndex = 9;
-            // 
-            // pbxuserausloggen
-            // 
-            this.pbxuserausloggen.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbxuserausloggen.Image = ((System.Drawing.Image)(resources.GetObject("pbxuserausloggen.Image")));
-            this.pbxuserausloggen.Location = new System.Drawing.Point(3, 3);
-            this.pbxuserausloggen.Name = "pbxuserausloggen";
-            this.pbxuserausloggen.Size = new System.Drawing.Size(339, 273);
-            this.pbxuserausloggen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbxuserausloggen.TabIndex = 1;
-            this.pbxuserausloggen.TabStop = false;
             // 
             // lbluserausloggen
             // 
@@ -126,6 +104,30 @@
             this.lbluserausloggen.TabIndex = 0;
             this.lbluserausloggen.Text = "Ausloggen";
             this.lbluserausloggen.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pbxuserausloggen
+            // 
+            this.pbxuserausloggen.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbxuserausloggen.Image = ((System.Drawing.Image)(resources.GetObject("pbxuserausloggen.Image")));
+            this.pbxuserausloggen.Location = new System.Drawing.Point(3, 3);
+            this.pbxuserausloggen.Name = "pbxuserausloggen";
+            this.pbxuserausloggen.Size = new System.Drawing.Size(339, 273);
+            this.pbxuserausloggen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxuserausloggen.TabIndex = 1;
+            this.pbxuserausloggen.TabStop = false;
+            this.pbxuserausloggen.Click += new System.EventHandler(this.pbxuserausloggen_Click);
+            // 
+            // pbxuserspielen
+            // 
+            this.pbxuserspielen.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbxuserspielen.Image = ((System.Drawing.Image)(resources.GetObject("pbxuserspielen.Image")));
+            this.pbxuserspielen.Location = new System.Drawing.Point(3, 3);
+            this.pbxuserspielen.Name = "pbxuserspielen";
+            this.pbxuserspielen.Size = new System.Drawing.Size(339, 273);
+            this.pbxuserspielen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxuserspielen.TabIndex = 1;
+            this.pbxuserspielen.TabStop = false;
+            this.pbxuserspielen.Click += new System.EventHandler(this.pbxuserspielen_Click);
             // 
             // Usermain
             // 
@@ -142,9 +144,9 @@
             this.Name = "Usermain";
             this.Text = "Usermain";
             this.pnluserspielen.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbxuserspielen)).EndInit();
             this.pnluserausloggen.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbxuserausloggen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxuserspielen)).EndInit();
             this.ResumeLayout(false);
 
         }

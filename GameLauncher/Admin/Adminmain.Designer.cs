@@ -176,6 +176,7 @@
             this.pbxadminausloggen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxadminausloggen.TabIndex = 3;
             this.pbxadminausloggen.TabStop = false;
+            this.pbxadminausloggen.Click += new System.EventHandler(this.pbxadminausloggen_Click);
             // 
             // pbxadmineinstellung
             // 
@@ -188,6 +189,7 @@
             this.pbxadmineinstellung.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxadmineinstellung.TabIndex = 3;
             this.pbxadmineinstellung.TabStop = false;
+            this.pbxadmineinstellung.Click += new System.EventHandler(this.pbxadmineinstellung_Click);
             // 
             // pbxadminbenutzer
             // 
@@ -200,6 +202,7 @@
             this.pbxadminbenutzer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxadminbenutzer.TabIndex = 2;
             this.pbxadminbenutzer.TabStop = false;
+            this.pbxadminbenutzer.Click += new System.EventHandler(this.pbxadminbenutzer_Click);
             // 
             // pbxadminspiele
             // 
@@ -211,6 +214,7 @@
             this.pbxadminspiele.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxadminspiele.TabIndex = 1;
             this.pbxadminspiele.TabStop = false;
+            this.pbxadminspiele.Click += new System.EventHandler(this.pbxadminspiele_Click);
             // 
             // Adminmain
             // 

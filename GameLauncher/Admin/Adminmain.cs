@@ -16,5 +16,33 @@ namespace GameLauncher.Admin
         {
             InitializeComponent();
         }
+
+        private void pbxadminbenutzer_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AdminBenutzer adminbenutzer = new AdminBenutzer();
+            adminbenutzer.Show();
+        }
+
+        private void pbxadminspiele_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Adminspiele adminspiele = new Adminspiele();
+            adminspiele.Show();
+        }
+
+        private void pbxadmineinstellung_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Admineinstellungen admineinstellung = new Admineinstellungen();
+            admineinstellung.Show();
+        }
+
+        private void pbxadminausloggen_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login login = new Login();
+            login.Show();
+        }
     }
 }
