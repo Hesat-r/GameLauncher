@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin\Main.cs">
+    <Compile Include="Admin\Adminmain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin\Main.Designer.cs">
-      <DependentUpon>Main.cs</DependentUpon>
+    <Compile Include="Admin\Adminmain.Designer.cs">
+      <DependentUpon>Adminmain.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -66,8 +66,14 @@
     <Compile Include="Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Admin\Main.resx">
-      <DependentUpon>Main.cs</DependentUpon>
+    <Compile Include="User\Usermain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\Usermain.Designer.cs">
+      <DependentUpon>Usermain.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Admin\Adminmain.resx">
+      <DependentUpon>Adminmain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -85,6 +91,9 @@
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="User\Usermain.resx">
+      <DependentUpon>Usermain.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -101,8 +110,6 @@
   <ItemGroup>
     <None Include="Resources\schlussel.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="User\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

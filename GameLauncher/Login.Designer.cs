@@ -31,17 +31,18 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.pnlBenutzerLogin = new System.Windows.Forms.Panel();
             this.tbxBenutzerLogin = new System.Windows.Forms.TextBox();
-            this.pbxBenutzerLogin = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pnlpasswort = new System.Windows.Forms.Panel();
+            this.tbxpasswort = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.lblgame = new System.Windows.Forms.Label();
             this.lbllauncher = new System.Windows.Forms.Label();
+            this.btnregister = new System.Windows.Forms.Button();
+            this.pbxpasswort = new System.Windows.Forms.PictureBox();
+            this.pbxBenutzerLogin = new System.Windows.Forms.PictureBox();
             this.pnlBenutzerLogin.SuspendLayout();
+            this.pnlpasswort.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxpasswort)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxBenutzerLogin)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlBenutzerLogin
@@ -67,6 +68,93 @@
             this.tbxBenutzerLogin.Text = "Email";
             this.tbxBenutzerLogin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // pnlpasswort
+            // 
+            this.pnlpasswort.Controls.Add(this.tbxpasswort);
+            this.pnlpasswort.Controls.Add(this.pbxpasswort);
+            this.pnlpasswort.Location = new System.Drawing.Point(135, 439);
+            this.pnlpasswort.Name = "pnlpasswort";
+            this.pnlpasswort.Size = new System.Drawing.Size(454, 59);
+            this.pnlpasswort.TabIndex = 1;
+            // 
+            // tbxpasswort
+            // 
+            this.tbxpasswort.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
+            this.tbxpasswort.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbxpasswort.Font = new System.Drawing.Font("Arial", 22.25F);
+            this.tbxpasswort.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.tbxpasswort.Location = new System.Drawing.Point(81, 3);
+            this.tbxpasswort.Multiline = true;
+            this.tbxpasswort.Name = "tbxpasswort";
+            this.tbxpasswort.Size = new System.Drawing.Size(370, 53);
+            this.tbxpasswort.TabIndex = 2;
+            this.tbxpasswort.Text = "Passwort";
+            this.tbxpasswort.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbxpasswort.UseSystemPasswordChar = true;
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(252)))), ((int)(((byte)(241)))));
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLogin.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.ForeColor = System.Drawing.Color.Black;
+            this.btnLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogin.Location = new System.Drawing.Point(135, 521);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(197, 67);
+            this.btnLogin.TabIndex = 3;
+            this.btnLogin.Text = "Login";
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
+            // lblgame
+            // 
+            this.lblgame.AutoSize = true;
+            this.lblgame.Font = new System.Drawing.Font("Paper Flowers", 102.25F);
+            this.lblgame.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(252)))), ((int)(((byte)(241)))));
+            this.lblgame.Location = new System.Drawing.Point(161, 61);
+            this.lblgame.Name = "lblgame";
+            this.lblgame.Size = new System.Drawing.Size(231, 141);
+            this.lblgame.TabIndex = 4;
+            this.lblgame.Text = "Game";
+            // 
+            // lbllauncher
+            // 
+            this.lbllauncher.AutoSize = true;
+            this.lbllauncher.Font = new System.Drawing.Font("Paper Flowers", 82.25F);
+            this.lbllauncher.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(198)))), ((int)(((byte)(199)))));
+            this.lbllauncher.Location = new System.Drawing.Point(252, 189);
+            this.lbllauncher.Name = "lbllauncher";
+            this.lbllauncher.Size = new System.Drawing.Size(315, 113);
+            this.lbllauncher.TabIndex = 5;
+            this.lbllauncher.Text = "Launcher";
+            // 
+            // btnregister
+            // 
+            this.btnregister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(252)))), ((int)(((byte)(241)))));
+            this.btnregister.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnregister.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnregister.ForeColor = System.Drawing.Color.Black;
+            this.btnregister.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnregister.Location = new System.Drawing.Point(389, 521);
+            this.btnregister.Name = "btnregister";
+            this.btnregister.Size = new System.Drawing.Size(197, 67);
+            this.btnregister.TabIndex = 6;
+            this.btnregister.Text = "Registrieren";
+            this.btnregister.UseVisualStyleBackColor = false;
+            this.btnregister.Click += new System.EventHandler(this.btnregister_Click);
+            // 
+            // pbxpasswort
+            // 
+            this.pbxpasswort.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbxpasswort.Image = ((System.Drawing.Image)(resources.GetObject("pbxpasswort.Image")));
+            this.pbxpasswort.Location = new System.Drawing.Point(15, 3);
+            this.pbxpasswort.Name = "pbxpasswort";
+            this.pbxpasswort.Size = new System.Drawing.Size(72, 53);
+            this.pbxpasswort.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxpasswort.TabIndex = 0;
+            this.pbxpasswort.TabStop = false;
+            // 
             // pbxBenutzerLogin
             // 
             this.pbxBenutzerLogin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -78,97 +166,29 @@
             this.pbxBenutzerLogin.TabIndex = 0;
             this.pbxBenutzerLogin.TabStop = false;
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(135, 439);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(454, 59);
-            this.panel1.TabIndex = 1;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Arial", 22.25F);
-            this.textBox1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox1.Location = new System.Drawing.Point(81, 3);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(370, 53);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.Text = "Passwort";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox1.UseSystemPasswordChar = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(15, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(72, 53);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnLogin
-            // 
-            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(252)))), ((int)(((byte)(241)))));
-            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnLogin.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.ForeColor = System.Drawing.Color.Black;
-            this.btnLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogin.Location = new System.Drawing.Point(242, 526);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(197, 67);
-            this.btnLogin.TabIndex = 3;
-            this.btnLogin.Text = "Login";
-            this.btnLogin.UseVisualStyleBackColor = false;
-            // 
-            // lblgame
-            // 
-            this.lblgame.AutoSize = true;
-            this.lblgame.Font = new System.Drawing.Font("Paper Flowers", 102.25F);
-            this.lblgame.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(252)))), ((int)(((byte)(241)))));
-            this.lblgame.Location = new System.Drawing.Point(146, 48);
-            this.lblgame.Name = "lblgame";
-            this.lblgame.Size = new System.Drawing.Size(231, 141);
-            this.lblgame.TabIndex = 4;
-            this.lblgame.Text = "Game";
-            // 
-            // lbllauncher
-            // 
-            this.lbllauncher.AutoSize = true;
-            this.lbllauncher.Font = new System.Drawing.Font("Paper Flowers", 102.25F);
-            this.lbllauncher.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(198)))), ((int)(((byte)(199)))));
-            this.lbllauncher.Location = new System.Drawing.Point(254, 173);
-            this.lbllauncher.Name = "lbllauncher";
-            this.lbllauncher.Size = new System.Drawing.Size(395, 141);
-            this.lbllauncher.TabIndex = 5;
-            this.lbllauncher.Text = "Launcher";
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
             this.ClientSize = new System.Drawing.Size(725, 693);
+            this.Controls.Add(this.btnregister);
             this.Controls.Add(this.lbllauncher);
             this.Controls.Add(this.lblgame);
             this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlpasswort);
             this.Controls.Add(this.pnlBenutzerLogin);
             this.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.MaximumSize = new System.Drawing.Size(741, 732);
+            this.MinimumSize = new System.Drawing.Size(741, 732);
             this.Name = "Login";
             this.Text = "Login";
             this.pnlBenutzerLogin.ResumeLayout(false);
             this.pnlBenutzerLogin.PerformLayout();
+            this.pnlpasswort.ResumeLayout(false);
+            this.pnlpasswort.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxpasswort)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxBenutzerLogin)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -179,12 +199,13 @@
         private System.Windows.Forms.Panel pnlBenutzerLogin;
         private System.Windows.Forms.TextBox tbxBenutzerLogin;
         private System.Windows.Forms.PictureBox pbxBenutzerLogin;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel pnlpasswort;
+        private System.Windows.Forms.TextBox tbxpasswort;
+        private System.Windows.Forms.PictureBox pbxpasswort;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label lblgame;
         private System.Windows.Forms.Label lbllauncher;
+        private System.Windows.Forms.Button btnregister;
     }
 }
 

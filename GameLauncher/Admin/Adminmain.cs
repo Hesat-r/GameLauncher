@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GameLauncher.Admin
 {
-    public partial class Main : Form
+    public partial class Adminmain : Form
     {
-        public Main()
+        public Adminmain()
         {
             InitializeComponent();
         }

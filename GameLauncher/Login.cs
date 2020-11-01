@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GameLauncher.Admin;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +18,18 @@ namespace GameLauncher
             InitializeComponent();
         }
 
-       
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Adminmain adminmain = new Adminmain();
+            adminmain.Show();
+        }
+
+        private void btnregister_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Register register = new Register();
+            register.Show();
+        }
     }
 }

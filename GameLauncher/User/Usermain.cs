@@ -8,20 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GameLauncher
+namespace GameLauncher.User
 {
-    public partial class Register : Form
+    public partial class Usermain : Form
     {
-        public Register()
+        public Usermain()
         {
             InitializeComponent();
-        }
-
-        private void btnRegister_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Login login = new Login();
-            login.Show();
         }
     }
 }
