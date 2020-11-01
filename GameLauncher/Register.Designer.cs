@@ -31,27 +31,31 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Register));
             this.pnlBenutzer = new System.Windows.Forms.Panel();
             this.tbxBenutzerRegister = new System.Windows.Forms.TextBox();
+            this.pbxBenutzerLogin = new System.Windows.Forms.PictureBox();
             this.pnlpasswort = new System.Windows.Forms.Panel();
             this.tbxPasswortRegister = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlname = new System.Windows.Forms.Panel();
             this.tbxNameRegister = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pnlvorname = new System.Windows.Forms.Panel();
             this.tbxVornameRegister = new System.Windows.Forms.TextBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnRegister = new System.Windows.Forms.Button();
             this.lblgame = new System.Windows.Forms.Label();
             this.lbllauncher = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pbxBenutzerLogin = new System.Windows.Forms.PictureBox();
+            this.pnlrechte = new System.Windows.Forms.Panel();
+            this.rbtbenutzerrechte = new System.Windows.Forms.RadioButton();
+            this.rbtnadminrechte = new System.Windows.Forms.RadioButton();
             this.pnlBenutzer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxBenutzerLogin)).BeginInit();
             this.pnlpasswort.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlname.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnlvorname.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxBenutzerLogin)).BeginInit();
+            this.pnlrechte.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlBenutzer
@@ -77,6 +81,17 @@
             this.tbxBenutzerRegister.Text = "Email";
             this.tbxBenutzerRegister.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // pbxBenutzerLogin
+            // 
+            this.pbxBenutzerLogin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbxBenutzerLogin.Image = ((System.Drawing.Image)(resources.GetObject("pbxBenutzerLogin.Image")));
+            this.pbxBenutzerLogin.Location = new System.Drawing.Point(15, 0);
+            this.pbxBenutzerLogin.Name = "pbxBenutzerLogin";
+            this.pbxBenutzerLogin.Size = new System.Drawing.Size(72, 53);
+            this.pbxBenutzerLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxBenutzerLogin.TabIndex = 0;
+            this.pbxBenutzerLogin.TabStop = false;
+            // 
             // pnlpasswort
             // 
             this.pnlpasswort.Controls.Add(this.tbxPasswortRegister);
@@ -101,6 +116,17 @@
             this.tbxPasswortRegister.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tbxPasswortRegister.UseSystemPasswordChar = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(15, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(72, 53);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // pnlname
             // 
             this.pnlname.Controls.Add(this.tbxNameRegister);
@@ -123,6 +149,17 @@
             this.tbxNameRegister.TabIndex = 1;
             this.tbxNameRegister.Text = "Name";
             this.tbxNameRegister.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(15, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(72, 53);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
             // 
             // pnlvorname
             // 
@@ -147,6 +184,17 @@
             this.tbxVornameRegister.Text = "Vorname";
             this.tbxVornameRegister.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(15, 0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(72, 53);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
+            // 
             // btnRegister
             // 
             this.btnRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(252)))), ((int)(((byte)(241)))));
@@ -154,7 +202,7 @@
             this.btnRegister.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegister.ForeColor = System.Drawing.Color.Black;
             this.btnRegister.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegister.Location = new System.Drawing.Point(250, 532);
+            this.btnRegister.Location = new System.Drawing.Point(250, 555);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(197, 67);
             this.btnRegister.TabIndex = 5;
@@ -185,49 +233,36 @@
             this.lbllauncher.TabIndex = 7;
             this.lbllauncher.Text = "Launcher";
             // 
-            // pictureBox3
+            // pnlrechte
             // 
-            this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(15, 0);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(72, 53);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
+            this.pnlrechte.Controls.Add(this.rbtnadminrechte);
+            this.pnlrechte.Controls.Add(this.rbtbenutzerrechte);
+            this.pnlrechte.Location = new System.Drawing.Point(219, 507);
+            this.pnlrechte.Name = "pnlrechte";
+            this.pnlrechte.Size = new System.Drawing.Size(315, 49);
+            this.pnlrechte.TabIndex = 8;
             // 
-            // pictureBox2
+            // rbtbenutzerrechte
             // 
-            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(15, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(72, 53);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
+            this.rbtbenutzerrechte.AutoSize = true;
+            this.rbtbenutzerrechte.Location = new System.Drawing.Point(25, 19);
+            this.rbtbenutzerrechte.Name = "rbtbenutzerrechte";
+            this.rbtbenutzerrechte.Size = new System.Drawing.Size(67, 17);
+            this.rbtbenutzerrechte.TabIndex = 0;
+            this.rbtbenutzerrechte.TabStop = true;
+            this.rbtbenutzerrechte.Text = "Benutzer";
+            this.rbtbenutzerrechte.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
+            // rbtnadminrechte
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(15, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(72, 53);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pbxBenutzerLogin
-            // 
-            this.pbxBenutzerLogin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbxBenutzerLogin.Image = ((System.Drawing.Image)(resources.GetObject("pbxBenutzerLogin.Image")));
-            this.pbxBenutzerLogin.Location = new System.Drawing.Point(15, 0);
-            this.pbxBenutzerLogin.Name = "pbxBenutzerLogin";
-            this.pbxBenutzerLogin.Size = new System.Drawing.Size(72, 53);
-            this.pbxBenutzerLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbxBenutzerLogin.TabIndex = 0;
-            this.pbxBenutzerLogin.TabStop = false;
+            this.rbtnadminrechte.AutoSize = true;
+            this.rbtnadminrechte.Location = new System.Drawing.Point(184, 19);
+            this.rbtnadminrechte.Name = "rbtnadminrechte";
+            this.rbtnadminrechte.Size = new System.Drawing.Size(54, 17);
+            this.rbtnadminrechte.TabIndex = 0;
+            this.rbtnadminrechte.TabStop = true;
+            this.rbtnadminrechte.Text = "Admin";
+            this.rbtnadminrechte.UseVisualStyleBackColor = true;
             // 
             // Register
             // 
@@ -235,6 +270,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
             this.ClientSize = new System.Drawing.Size(704, 634);
+            this.Controls.Add(this.pnlrechte);
             this.Controls.Add(this.lbllauncher);
             this.Controls.Add(this.lblgame);
             this.Controls.Add(this.btnRegister);
@@ -249,16 +285,18 @@
             this.Text = "Register";
             this.pnlBenutzer.ResumeLayout(false);
             this.pnlBenutzer.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxBenutzerLogin)).EndInit();
             this.pnlpasswort.ResumeLayout(false);
             this.pnlpasswort.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlname.ResumeLayout(false);
             this.pnlname.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pnlvorname.ResumeLayout(false);
             this.pnlvorname.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxBenutzerLogin)).EndInit();
+            this.pnlrechte.ResumeLayout(false);
+            this.pnlrechte.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -281,5 +319,8 @@
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.Label lblgame;
         private System.Windows.Forms.Label lbllauncher;
+        private System.Windows.Forms.Panel pnlrechte;
+        private System.Windows.Forms.RadioButton rbtnadminrechte;
+        private System.Windows.Forms.RadioButton rbtbenutzerrechte;
     }
 }
