@@ -31,18 +31,18 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.pnlBenutzerLogin = new System.Windows.Forms.Panel();
             this.tbxBenutzerLogin = new System.Windows.Forms.TextBox();
+            this.pbxBenutzerLogin = new System.Windows.Forms.PictureBox();
             this.pnlpasswort = new System.Windows.Forms.Panel();
             this.tbxpasswort = new System.Windows.Forms.TextBox();
+            this.pbxpasswort = new System.Windows.Forms.PictureBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.lblgame = new System.Windows.Forms.Label();
             this.lbllauncher = new System.Windows.Forms.Label();
             this.btnregister = new System.Windows.Forms.Button();
-            this.pbxpasswort = new System.Windows.Forms.PictureBox();
-            this.pbxBenutzerLogin = new System.Windows.Forms.PictureBox();
             this.pnlBenutzerLogin.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxBenutzerLogin)).BeginInit();
             this.pnlpasswort.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxpasswort)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxBenutzerLogin)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlBenutzerLogin
@@ -68,6 +68,17 @@
             this.tbxBenutzerLogin.Text = "Email";
             this.tbxBenutzerLogin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // pbxBenutzerLogin
+            // 
+            this.pbxBenutzerLogin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbxBenutzerLogin.Image = ((System.Drawing.Image)(resources.GetObject("pbxBenutzerLogin.Image")));
+            this.pbxBenutzerLogin.Location = new System.Drawing.Point(15, 0);
+            this.pbxBenutzerLogin.Name = "pbxBenutzerLogin";
+            this.pbxBenutzerLogin.Size = new System.Drawing.Size(72, 53);
+            this.pbxBenutzerLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxBenutzerLogin.TabIndex = 0;
+            this.pbxBenutzerLogin.TabStop = false;
+            // 
             // pnlpasswort
             // 
             this.pnlpasswort.Controls.Add(this.tbxpasswort);
@@ -91,6 +102,17 @@
             this.tbxpasswort.Text = "Passwort";
             this.tbxpasswort.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tbxpasswort.UseSystemPasswordChar = true;
+            // 
+            // pbxpasswort
+            // 
+            this.pbxpasswort.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbxpasswort.Image = ((System.Drawing.Image)(resources.GetObject("pbxpasswort.Image")));
+            this.pbxpasswort.Location = new System.Drawing.Point(15, 3);
+            this.pbxpasswort.Name = "pbxpasswort";
+            this.pbxpasswort.Size = new System.Drawing.Size(72, 53);
+            this.pbxpasswort.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxpasswort.TabIndex = 0;
+            this.pbxpasswort.TabStop = false;
             // 
             // btnLogin
             // 
@@ -144,28 +166,6 @@
             this.btnregister.UseVisualStyleBackColor = false;
             this.btnregister.Click += new System.EventHandler(this.btnregister_Click);
             // 
-            // pbxpasswort
-            // 
-            this.pbxpasswort.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbxpasswort.Image = ((System.Drawing.Image)(resources.GetObject("pbxpasswort.Image")));
-            this.pbxpasswort.Location = new System.Drawing.Point(15, 3);
-            this.pbxpasswort.Name = "pbxpasswort";
-            this.pbxpasswort.Size = new System.Drawing.Size(72, 53);
-            this.pbxpasswort.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbxpasswort.TabIndex = 0;
-            this.pbxpasswort.TabStop = false;
-            // 
-            // pbxBenutzerLogin
-            // 
-            this.pbxBenutzerLogin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbxBenutzerLogin.Image = ((System.Drawing.Image)(resources.GetObject("pbxBenutzerLogin.Image")));
-            this.pbxBenutzerLogin.Location = new System.Drawing.Point(15, 0);
-            this.pbxBenutzerLogin.Name = "pbxBenutzerLogin";
-            this.pbxBenutzerLogin.Size = new System.Drawing.Size(72, 53);
-            this.pbxBenutzerLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbxBenutzerLogin.TabIndex = 0;
-            this.pbxBenutzerLogin.TabStop = false;
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -179,16 +179,17 @@
             this.Controls.Add(this.pnlpasswort);
             this.Controls.Add(this.pnlBenutzerLogin);
             this.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(741, 732);
             this.MinimumSize = new System.Drawing.Size(741, 732);
             this.Name = "Login";
             this.Text = "Login";
             this.pnlBenutzerLogin.ResumeLayout(false);
             this.pnlBenutzerLogin.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxBenutzerLogin)).EndInit();
             this.pnlpasswort.ResumeLayout(false);
             this.pnlpasswort.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxpasswort)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxBenutzerLogin)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

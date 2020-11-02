@@ -134,6 +134,7 @@
             this.Controls.Add(this.pnlspielhinzufuegen);
             this.Controls.Add(this.lblLauncher);
             this.Controls.Add(this.lblgame);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Adminspiele";
             this.Text = "Adminspiele";
             this.pnlspielhinzufuegen.ResumeLayout(false);

@@ -45,8 +45,8 @@
             this.lblgame = new System.Windows.Forms.Label();
             this.lbllauncher = new System.Windows.Forms.Label();
             this.pnlrechte = new System.Windows.Forms.Panel();
-            this.rbtbenutzerrechte = new System.Windows.Forms.RadioButton();
             this.rbtnadminrechte = new System.Windows.Forms.RadioButton();
+            this.rbtbenutzerrechte = new System.Windows.Forms.RadioButton();
             this.pnlBenutzer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxBenutzerLogin)).BeginInit();
             this.pnlpasswort.SuspendLayout();
@@ -242,17 +242,6 @@
             this.pnlrechte.Size = new System.Drawing.Size(315, 49);
             this.pnlrechte.TabIndex = 8;
             // 
-            // rbtbenutzerrechte
-            // 
-            this.rbtbenutzerrechte.AutoSize = true;
-            this.rbtbenutzerrechte.Location = new System.Drawing.Point(25, 19);
-            this.rbtbenutzerrechte.Name = "rbtbenutzerrechte";
-            this.rbtbenutzerrechte.Size = new System.Drawing.Size(67, 17);
-            this.rbtbenutzerrechte.TabIndex = 0;
-            this.rbtbenutzerrechte.TabStop = true;
-            this.rbtbenutzerrechte.Text = "Benutzer";
-            this.rbtbenutzerrechte.UseVisualStyleBackColor = true;
-            // 
             // rbtnadminrechte
             // 
             this.rbtnadminrechte.AutoSize = true;
@@ -263,6 +252,17 @@
             this.rbtnadminrechte.TabStop = true;
             this.rbtnadminrechte.Text = "Admin";
             this.rbtnadminrechte.UseVisualStyleBackColor = true;
+            // 
+            // rbtbenutzerrechte
+            // 
+            this.rbtbenutzerrechte.AutoSize = true;
+            this.rbtbenutzerrechte.Location = new System.Drawing.Point(25, 19);
+            this.rbtbenutzerrechte.Name = "rbtbenutzerrechte";
+            this.rbtbenutzerrechte.Size = new System.Drawing.Size(67, 17);
+            this.rbtbenutzerrechte.TabIndex = 0;
+            this.rbtbenutzerrechte.TabStop = true;
+            this.rbtbenutzerrechte.Text = "Benutzer";
+            this.rbtbenutzerrechte.UseVisualStyleBackColor = true;
             // 
             // Register
             // 
@@ -279,6 +279,7 @@
             this.Controls.Add(this.pnlpasswort);
             this.Controls.Add(this.pnlBenutzer);
             this.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(720, 673);
             this.MinimumSize = new System.Drawing.Size(720, 673);
             this.Name = "Register";

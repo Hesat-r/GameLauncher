@@ -172,6 +172,7 @@
             this.Controls.Add(this.pnlzeiteinstellen);
             this.Controls.Add(this.lblgame);
             this.Controls.Add(this.lblLauncher);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Admineinstellungen";
             this.Text = "Admineinstellungen";
             this.pnlzeiteinstellen.ResumeLayout(false);
