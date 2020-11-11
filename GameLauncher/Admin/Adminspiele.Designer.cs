@@ -92,6 +92,7 @@
             this.pbxspielhinzufuegen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxspielhinzufuegen.TabIndex = 10;
             this.pbxspielhinzufuegen.TabStop = false;
+            this.pbxspielhinzufuegen.Click += new System.EventHandler(this.pbxspielhinzufuegen_Click);
             // 
             // pnlzurueck
             // 

@@ -141,6 +141,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Userspiele";
             this.Text = "Userspiele";
+            this.Load += new System.EventHandler(this.Userspiele_Load);
             this.pnlminecraftspielen.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbxminecraftspielen)).EndInit();
             this.pnlzurueck.ResumeLayout(false);

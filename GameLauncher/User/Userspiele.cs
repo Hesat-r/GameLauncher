@@ -23,5 +23,10 @@ namespace GameLauncher.User
             Usermain usermain = new Usermain();
             usermain.Show();
         }
+
+        private void Userspiele_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

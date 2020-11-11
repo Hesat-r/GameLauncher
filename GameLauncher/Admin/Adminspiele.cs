@@ -23,5 +23,12 @@ namespace GameLauncher.Admin
             Adminmain Adminmain = new Adminmain();
             Adminmain.Show();
         }
+
+        private void pbxspielhinzufuegen_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Adminspielhinzufuegen Adminsp = new Adminspielhinzufuegen();
+            Adminsp.Show();
+        }
     }
 }
