@@ -55,6 +55,12 @@
     <Compile Include="Admin\AdminBenutzer.Designer.cs">
       <DependentUpon>AdminBenutzer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin\Adminbenutzerhinzufügen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Adminbenutzerhinzufügen.Designer.cs">
+      <DependentUpon>Adminbenutzerhinzufügen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Admineinstellungen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +113,9 @@
     </Compile>
     <EmbeddedResource Include="Admin\AdminBenutzer.resx">
       <DependentUpon>AdminBenutzer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Adminbenutzerhinzufügen.resx">
+      <DependentUpon>Adminbenutzerhinzufügen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\Admineinstellungen.resx">
       <DependentUpon>Admineinstellungen.cs</DependentUpon>

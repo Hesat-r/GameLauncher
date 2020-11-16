@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Adminspielhinzufuegen));
             this.lblLauncher = new System.Windows.Forms.Label();
             this.lblgame = new System.Windows.Forms.Label();
             this.tbxspielename = new System.Windows.Forms.TextBox();
@@ -39,6 +40,8 @@
             this.btnspielepfad = new System.Windows.Forms.Button();
             this.fbdspielpfad = new System.Windows.Forms.FolderBrowserDialog();
             this.fbdbildpfad = new System.Windows.Forms.FolderBrowserDialog();
+            this.pbxzurueck = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxzurueck)).BeginInit();
             this.SuspendLayout();
             // 
             // lblLauncher
@@ -158,12 +161,25 @@
             this.btnspielepfad.UseVisualStyleBackColor = false;
             this.btnspielepfad.Click += new System.EventHandler(this.btnspielepfad_Click);
             // 
+            // pbxzurueck
+            // 
+            this.pbxzurueck.BackColor = System.Drawing.Color.Transparent;
+            this.pbxzurueck.Image = ((System.Drawing.Image)(resources.GetObject("pbxzurueck.Image")));
+            this.pbxzurueck.Location = new System.Drawing.Point(12, 12);
+            this.pbxzurueck.Name = "pbxzurueck";
+            this.pbxzurueck.Size = new System.Drawing.Size(93, 62);
+            this.pbxzurueck.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxzurueck.TabIndex = 19;
+            this.pbxzurueck.TabStop = false;
+            this.pbxzurueck.Click += new System.EventHandler(this.pbxzurueck_Click);
+            // 
             // Adminspielhinzufuegen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
             this.ClientSize = new System.Drawing.Size(975, 662);
+            this.Controls.Add(this.pbxzurueck);
             this.Controls.Add(this.btnspielepfad);
             this.Controls.Add(this.btnbildpfad);
             this.Controls.Add(this.lbloder);
@@ -175,6 +191,7 @@
             this.Controls.Add(this.lblgame);
             this.Name = "Adminspielhinzufuegen";
             this.Text = "Adminspielhinzufuegen";
+            ((System.ComponentModel.ISupportInitialize)(this.pbxzurueck)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -193,5 +210,6 @@
         private System.Windows.Forms.Button btnspielepfad;
         private System.Windows.Forms.FolderBrowserDialog fbdspielpfad;
         private System.Windows.Forms.FolderBrowserDialog fbdbildpfad;
+        private System.Windows.Forms.PictureBox pbxzurueck;
     }
 }

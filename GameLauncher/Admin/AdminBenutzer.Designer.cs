@@ -72,6 +72,7 @@
             this.pbxbenutzerhinzufuegen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxbenutzerhinzufuegen.TabIndex = 10;
             this.pbxbenutzerhinzufuegen.TabStop = false;
+            this.pbxbenutzerhinzufuegen.Click += new System.EventHandler(this.pbxbenutzerhinzufuegen_Click);
             // 
             // pnlbenutzerhinzufuegen
             // 

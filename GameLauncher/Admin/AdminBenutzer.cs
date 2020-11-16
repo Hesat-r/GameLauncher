@@ -24,6 +24,11 @@ namespace GameLauncher.Admin
             Adminmain.Show();
         }
 
-     
+        private void pbxbenutzerhinzufuegen_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Adminbenutzerhinzufügen adminbenutzerhinzufügen = new Adminbenutzerhinzufügen();
+            adminbenutzerhinzufügen.Show();
+        }
     }
 }

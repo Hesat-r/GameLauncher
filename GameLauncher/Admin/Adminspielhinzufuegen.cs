@@ -33,5 +33,12 @@ namespace GameLauncher.Admin
 
             MessageBox.Show(path, "test", MessageBoxButtons.OK);
         }
+
+        private void pbxzurueck_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Adminmain adminmain = new Adminmain();
+            adminmain.Show();
+        }
     }
 }
