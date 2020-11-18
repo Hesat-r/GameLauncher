@@ -76,12 +76,13 @@
             // 
             this.pbxminecraftspielen.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxminecraftspielen.Image = ((System.Drawing.Image)(resources.GetObject("pbxminecraftspielen.Image")));
-            this.pbxminecraftspielen.Location = new System.Drawing.Point(3, 3);
+            this.pbxminecraftspielen.Location = new System.Drawing.Point(0, 3);
             this.pbxminecraftspielen.Name = "pbxminecraftspielen";
             this.pbxminecraftspielen.Size = new System.Drawing.Size(339, 273);
             this.pbxminecraftspielen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxminecraftspielen.TabIndex = 1;
             this.pbxminecraftspielen.TabStop = false;
+            this.pbxminecraftspielen.Click += new System.EventHandler(this.pbxminecraftspielen_Click);
             // 
             // lblminecraftspielen
             // 
@@ -141,7 +142,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Userspiele";
             this.Text = "Userspiele";
-            this.Load += new System.EventHandler(this.Userspiele_Load);
             this.pnlminecraftspielen.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbxminecraftspielen)).EndInit();
             this.pnlzurueck.ResumeLayout(false);
