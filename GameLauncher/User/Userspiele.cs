@@ -29,11 +29,12 @@ namespace GameLauncher.User
     
         private void pbxminecraftspielen_Click(object sender, EventArgs e)
         {
-            if (File.Exists("C:\Program Files (x86)\Steam\steamapps\common\Phasmophobia\Phasmophobia.exe"))
+            string minecraft = "";
+            if (File.Exists(minecraft))
             {
                 Process PhasmoStarten2 = new Process();
                 PhasmoStarten2.StartInfo.UseShellExecute = false;
-                PhasmoStarten2.StartInfo.FileName = "C:\Program Files (x86)\Steam\steamapps\common\Phasmophobia\Phasmophobia.exe";
+                PhasmoStarten2.StartInfo.FileName = minecraft;
                 PhasmoStarten2.StartInfo.CreateNoWindow = false;
                 PhasmoStarten2.Start();
             }
