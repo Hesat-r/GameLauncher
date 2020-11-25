@@ -115,7 +115,7 @@
             this.lbladminbenutzer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbladminbenutzer.Font = new System.Drawing.Font("Arial", 22.25F);
             this.lbladminbenutzer.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lbladminbenutzer.Location = new System.Drawing.Point(0, 279);
+            this.lbladminbenutzer.Location = new System.Drawing.Point(3, 279);
             this.lbladminbenutzer.Name = "lbladminbenutzer";
             this.lbladminbenutzer.Size = new System.Drawing.Size(345, 53);
             this.lbladminbenutzer.TabIndex = 1;

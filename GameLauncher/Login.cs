@@ -25,6 +25,9 @@ namespace GameLauncher
         }
 
         public bool angemeldet = false;
+        public bool angemeldetadmin = false;
+        public bool passwort = false;
+        public bool benutzer = false;
         private void btnLogin_Click(object sender, EventArgs e)
         {
             //string[] benutzerfile = File.ReadAllLines(@"D:\Benutzer.csv");
@@ -52,20 +55,43 @@ namespace GameLauncher
                     string[] spalten = geleseneZeile.Split(';');
                     if (tbxBenutzerLogin.Text == spalten[2])
                     {
-                        if (tbxpasswort.Text == spalten[4])
+                        
+                        if (tbxpasswort.Text == spalten[3])
                         {
+                            benutzer = true;
+                            passwort = true;
                             MessageBox.Show("Erfolgreich eingelogt", "Erfolgreich", MessageBoxButtons.OK);
 
-                            angemeldet = true;
+                            if (spalten[5] == "1" && benutzer == true && passwort == true)
+                            {
+                                angemeldetadmin = true;
+                            }
+                            else if (spalten[5] == "0" && benutzer == true && passwort == true)
+                            {
+                                angemeldet = true;
+                            }
 
                         }
+
+                        
                     }
                 }
-                if (angemeldet == true)
+                if (angemeldetadmin == true)
+                {
+                    this.Hide();
+                    Adminmain adminmain = new Adminmain();
+                    adminmain.Show();
+                }
+                else if(angemeldet == true)
                 {
                     this.Hide();
                     Usermain usermain = new Usermain();
                     usermain.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Falsche Anmelde daten", "FEHLER", MessageBoxButtons.OK);
+
                 }
                 sr.Close();
             }

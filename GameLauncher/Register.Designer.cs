@@ -47,6 +47,9 @@
             this.pnlrechte = new System.Windows.Forms.Panel();
             this.rbtnadminrechte = new System.Windows.Forms.RadioButton();
             this.rbtbenutzerrechte = new System.Windows.Forms.RadioButton();
+            this.tbxjahr = new System.Windows.Forms.TextBox();
+            this.tbxmonat = new System.Windows.Forms.TextBox();
+            this.tbxtag = new System.Windows.Forms.TextBox();
             this.pnlBenutzer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxBenutzerLogin)).BeginInit();
             this.pnlpasswort.SuspendLayout();
@@ -62,10 +65,10 @@
             // 
             this.pnlBenutzer.Controls.Add(this.tbxBenutzerRegister);
             this.pnlBenutzer.Controls.Add(this.pbxBenutzerLogin);
-            this.pnlBenutzer.Location = new System.Drawing.Point(84, 369);
+            this.pnlBenutzer.Location = new System.Drawing.Point(84, 307);
             this.pnlBenutzer.Name = "pnlBenutzer";
             this.pnlBenutzer.Size = new System.Drawing.Size(541, 59);
-            this.pnlBenutzer.TabIndex = 1;
+            this.pnlBenutzer.TabIndex = 3;
             // 
             // tbxBenutzerRegister
             // 
@@ -78,7 +81,7 @@
             this.tbxBenutzerRegister.Name = "tbxBenutzerRegister";
             this.tbxBenutzerRegister.Size = new System.Drawing.Size(454, 53);
             this.tbxBenutzerRegister.TabIndex = 3;
-            this.tbxBenutzerRegister.Text = "Email";
+            this.tbxBenutzerRegister.Text = "Benutzername";
             this.tbxBenutzerRegister.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pbxBenutzerLogin
@@ -96,10 +99,10 @@
             // 
             this.pnlpasswort.Controls.Add(this.tbxPasswortRegister);
             this.pnlpasswort.Controls.Add(this.pictureBox1);
-            this.pnlpasswort.Location = new System.Drawing.Point(84, 445);
+            this.pnlpasswort.Location = new System.Drawing.Point(84, 372);
             this.pnlpasswort.Name = "pnlpasswort";
             this.pnlpasswort.Size = new System.Drawing.Size(541, 59);
-            this.pnlpasswort.TabIndex = 2;
+            this.pnlpasswort.TabIndex = 4;
             // 
             // tbxPasswortRegister
             // 
@@ -131,10 +134,10 @@
             // 
             this.pnlname.Controls.Add(this.tbxNameRegister);
             this.pnlname.Controls.Add(this.pictureBox2);
-            this.pnlname.Location = new System.Drawing.Point(84, 286);
+            this.pnlname.Location = new System.Drawing.Point(84, 242);
             this.pnlname.Name = "pnlname";
             this.pnlname.Size = new System.Drawing.Size(266, 59);
-            this.pnlname.TabIndex = 3;
+            this.pnlname.TabIndex = 1;
             // 
             // tbxNameRegister
             // 
@@ -165,10 +168,10 @@
             // 
             this.pnlvorname.Controls.Add(this.tbxVornameRegister);
             this.pnlvorname.Controls.Add(this.pictureBox3);
-            this.pnlvorname.Location = new System.Drawing.Point(360, 286);
+            this.pnlvorname.Location = new System.Drawing.Point(359, 242);
             this.pnlvorname.Name = "pnlvorname";
             this.pnlvorname.Size = new System.Drawing.Size(266, 59);
-            this.pnlvorname.TabIndex = 4;
+            this.pnlvorname.TabIndex = 2;
             // 
             // tbxVornameRegister
             // 
@@ -205,7 +208,7 @@
             this.btnRegister.Location = new System.Drawing.Point(250, 555);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(197, 67);
-            this.btnRegister.TabIndex = 5;
+            this.btnRegister.TabIndex = 8;
             this.btnRegister.Text = "Register";
             this.btnRegister.UseVisualStyleBackColor = false;
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
@@ -216,7 +219,7 @@
             this.lblgame.BackColor = System.Drawing.Color.Transparent;
             this.lblgame.Font = new System.Drawing.Font("Paper Flowers", 91.75F);
             this.lblgame.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(252)))), ((int)(((byte)(241)))));
-            this.lblgame.Location = new System.Drawing.Point(140, 30);
+            this.lblgame.Location = new System.Drawing.Point(104, 9);
             this.lblgame.Name = "lblgame";
             this.lblgame.Size = new System.Drawing.Size(207, 126);
             this.lblgame.TabIndex = 6;
@@ -227,7 +230,7 @@
             this.lbllauncher.AutoSize = true;
             this.lbllauncher.Font = new System.Drawing.Font("Paper Flowers", 91.75F);
             this.lbllauncher.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(198)))), ((int)(((byte)(199)))));
-            this.lbllauncher.Location = new System.Drawing.Point(210, 146);
+            this.lbllauncher.Location = new System.Drawing.Point(223, 113);
             this.lbllauncher.Name = "lbllauncher";
             this.lbllauncher.Size = new System.Drawing.Size(354, 126);
             this.lbllauncher.TabIndex = 7;
@@ -237,10 +240,10 @@
             // 
             this.pnlrechte.Controls.Add(this.rbtnadminrechte);
             this.pnlrechte.Controls.Add(this.rbtbenutzerrechte);
-            this.pnlrechte.Location = new System.Drawing.Point(219, 507);
+            this.pnlrechte.Location = new System.Drawing.Point(197, 500);
             this.pnlrechte.Name = "pnlrechte";
             this.pnlrechte.Size = new System.Drawing.Size(315, 49);
-            this.pnlrechte.TabIndex = 8;
+            this.pnlrechte.TabIndex = 5;
             // 
             // rbtnadminrechte
             // 
@@ -248,7 +251,7 @@
             this.rbtnadminrechte.Location = new System.Drawing.Point(184, 19);
             this.rbtnadminrechte.Name = "rbtnadminrechte";
             this.rbtnadminrechte.Size = new System.Drawing.Size(54, 17);
-            this.rbtnadminrechte.TabIndex = 0;
+            this.rbtnadminrechte.TabIndex = 7;
             this.rbtnadminrechte.TabStop = true;
             this.rbtnadminrechte.Text = "Admin";
             this.rbtnadminrechte.UseVisualStyleBackColor = true;
@@ -259,10 +262,51 @@
             this.rbtbenutzerrechte.Location = new System.Drawing.Point(25, 19);
             this.rbtbenutzerrechte.Name = "rbtbenutzerrechte";
             this.rbtbenutzerrechte.Size = new System.Drawing.Size(67, 17);
-            this.rbtbenutzerrechte.TabIndex = 0;
-            this.rbtbenutzerrechte.TabStop = true;
+            this.rbtbenutzerrechte.TabIndex = 6;
             this.rbtbenutzerrechte.Text = "Benutzer";
             this.rbtbenutzerrechte.UseVisualStyleBackColor = true;
+            // 
+            // tbxjahr
+            // 
+            this.tbxjahr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
+            this.tbxjahr.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbxjahr.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.25F);
+            this.tbxjahr.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.tbxjahr.Location = new System.Drawing.Point(441, 439);
+            this.tbxjahr.Multiline = true;
+            this.tbxjahr.Name = "tbxjahr";
+            this.tbxjahr.Size = new System.Drawing.Size(138, 55);
+            this.tbxjahr.TabIndex = 11;
+            this.tbxjahr.Text = "Jahr";
+            this.tbxjahr.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tbxmonat
+            // 
+            this.tbxmonat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
+            this.tbxmonat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbxmonat.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.25F);
+            this.tbxmonat.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.tbxmonat.Location = new System.Drawing.Point(297, 439);
+            this.tbxmonat.Multiline = true;
+            this.tbxmonat.Name = "tbxmonat";
+            this.tbxmonat.Size = new System.Drawing.Size(138, 55);
+            this.tbxmonat.TabIndex = 10;
+            this.tbxmonat.Text = "Monat";
+            this.tbxmonat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tbxtag
+            // 
+            this.tbxtag.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
+            this.tbxtag.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbxtag.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.25F);
+            this.tbxtag.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.tbxtag.Location = new System.Drawing.Point(157, 439);
+            this.tbxtag.Multiline = true;
+            this.tbxtag.Name = "tbxtag";
+            this.tbxtag.Size = new System.Drawing.Size(134, 55);
+            this.tbxtag.TabIndex = 9;
+            this.tbxtag.Text = "Tag";
+            this.tbxtag.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Register
             // 
@@ -270,6 +314,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
             this.ClientSize = new System.Drawing.Size(704, 634);
+            this.Controls.Add(this.tbxjahr);
+            this.Controls.Add(this.tbxmonat);
+            this.Controls.Add(this.tbxtag);
             this.Controls.Add(this.pnlrechte);
             this.Controls.Add(this.lbllauncher);
             this.Controls.Add(this.lblgame);
@@ -284,6 +331,7 @@
             this.MinimumSize = new System.Drawing.Size(720, 673);
             this.Name = "Register";
             this.Text = "Register";
+            this.Load += new System.EventHandler(this.Register_Load);
             this.pnlBenutzer.ResumeLayout(false);
             this.pnlBenutzer.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxBenutzerLogin)).EndInit();
@@ -323,5 +371,8 @@
         private System.Windows.Forms.Panel pnlrechte;
         private System.Windows.Forms.RadioButton rbtnadminrechte;
         private System.Windows.Forms.RadioButton rbtbenutzerrechte;
+        private System.Windows.Forms.TextBox tbxjahr;
+        private System.Windows.Forms.TextBox tbxmonat;
+        private System.Windows.Forms.TextBox tbxtag;
     }
 }

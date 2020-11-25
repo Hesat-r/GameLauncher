@@ -33,11 +33,13 @@
             this.lblgame = new System.Windows.Forms.Label();
             this.tbxbenutzername = new System.Windows.Forms.TextBox();
             this.tbxpasswort = new System.Windows.Forms.TextBox();
+            this.btnbenutzererstellen = new System.Windows.Forms.Button();
+            this.pbxzurueck = new System.Windows.Forms.PictureBox();
+            this.tbxvorname = new System.Windows.Forms.TextBox();
+            this.tbxnachname = new System.Windows.Forms.TextBox();
             this.tbxtag = new System.Windows.Forms.TextBox();
             this.tbxmonat = new System.Windows.Forms.TextBox();
             this.tbxjahr = new System.Windows.Forms.TextBox();
-            this.btnbenutzererstellen = new System.Windows.Forms.Button();
-            this.pbxzurueck = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbxzurueck)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,11 +69,11 @@
             this.tbxbenutzername.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbxbenutzername.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.25F);
             this.tbxbenutzername.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.tbxbenutzername.Location = new System.Drawing.Point(229, 234);
+            this.tbxbenutzername.Location = new System.Drawing.Point(229, 249);
             this.tbxbenutzername.Multiline = true;
             this.tbxbenutzername.Name = "tbxbenutzername";
             this.tbxbenutzername.Size = new System.Drawing.Size(422, 55);
-            this.tbxbenutzername.TabIndex = 12;
+            this.tbxbenutzername.TabIndex = 3;
             this.tbxbenutzername.Text = "Benutzernamen";
             this.tbxbenutzername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -85,51 +87,9 @@
             this.tbxpasswort.Multiline = true;
             this.tbxpasswort.Name = "tbxpasswort";
             this.tbxpasswort.Size = new System.Drawing.Size(422, 55);
-            this.tbxpasswort.TabIndex = 13;
+            this.tbxpasswort.TabIndex = 4;
             this.tbxpasswort.Text = "Passwort";
             this.tbxpasswort.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // tbxtag
-            // 
-            this.tbxtag.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
-            this.tbxtag.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbxtag.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.25F);
-            this.tbxtag.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.tbxtag.Location = new System.Drawing.Point(229, 381);
-            this.tbxtag.Multiline = true;
-            this.tbxtag.Name = "tbxtag";
-            this.tbxtag.Size = new System.Drawing.Size(134, 55);
-            this.tbxtag.TabIndex = 14;
-            this.tbxtag.Text = "Tag";
-            this.tbxtag.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // tbxmonat
-            // 
-            this.tbxmonat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
-            this.tbxmonat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbxmonat.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.25F);
-            this.tbxmonat.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.tbxmonat.Location = new System.Drawing.Point(369, 381);
-            this.tbxmonat.Multiline = true;
-            this.tbxmonat.Name = "tbxmonat";
-            this.tbxmonat.Size = new System.Drawing.Size(136, 55);
-            this.tbxmonat.TabIndex = 15;
-            this.tbxmonat.Text = "Monat";
-            this.tbxmonat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // tbxjahr
-            // 
-            this.tbxjahr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
-            this.tbxjahr.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbxjahr.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.25F);
-            this.tbxjahr.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.tbxjahr.Location = new System.Drawing.Point(511, 381);
-            this.tbxjahr.Multiline = true;
-            this.tbxjahr.Name = "tbxjahr";
-            this.tbxjahr.Size = new System.Drawing.Size(140, 55);
-            this.tbxjahr.TabIndex = 16;
-            this.tbxjahr.Text = "Jahr";
-            this.tbxjahr.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnbenutzererstellen
             // 
@@ -141,9 +101,10 @@
             this.btnbenutzererstellen.Location = new System.Drawing.Point(686, 537);
             this.btnbenutzererstellen.Name = "btnbenutzererstellen";
             this.btnbenutzererstellen.Size = new System.Drawing.Size(220, 67);
-            this.btnbenutzererstellen.TabIndex = 17;
+            this.btnbenutzererstellen.TabIndex = 8;
             this.btnbenutzererstellen.Text = "Benutzer erstellen";
             this.btnbenutzererstellen.UseVisualStyleBackColor = false;
+            this.btnbenutzererstellen.Click += new System.EventHandler(this.btnbenutzererstellen_Click);
             // 
             // pbxzurueck
             // 
@@ -157,17 +118,89 @@
             this.pbxzurueck.TabStop = false;
             this.pbxzurueck.Click += new System.EventHandler(this.pbxzurueck_Click);
             // 
+            // tbxvorname
+            // 
+            this.tbxvorname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
+            this.tbxvorname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbxvorname.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.25F);
+            this.tbxvorname.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.tbxvorname.Location = new System.Drawing.Point(229, 181);
+            this.tbxvorname.Multiline = true;
+            this.tbxvorname.Name = "tbxvorname";
+            this.tbxvorname.Size = new System.Drawing.Size(201, 55);
+            this.tbxvorname.TabIndex = 1;
+            this.tbxvorname.Text = "Vorname";
+            this.tbxvorname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tbxnachname
+            // 
+            this.tbxnachname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
+            this.tbxnachname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbxnachname.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.25F);
+            this.tbxnachname.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.tbxnachname.Location = new System.Drawing.Point(445, 181);
+            this.tbxnachname.Multiline = true;
+            this.tbxnachname.Name = "tbxnachname";
+            this.tbxnachname.Size = new System.Drawing.Size(206, 55);
+            this.tbxnachname.TabIndex = 2;
+            this.tbxnachname.Text = "Nachname";
+            this.tbxnachname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tbxtag
+            // 
+            this.tbxtag.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
+            this.tbxtag.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbxtag.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.25F);
+            this.tbxtag.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.tbxtag.Location = new System.Drawing.Point(229, 371);
+            this.tbxtag.Multiline = true;
+            this.tbxtag.Name = "tbxtag";
+            this.tbxtag.Size = new System.Drawing.Size(134, 55);
+            this.tbxtag.TabIndex = 5;
+            this.tbxtag.Text = "Tag";
+            this.tbxtag.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tbxmonat
+            // 
+            this.tbxmonat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
+            this.tbxmonat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbxmonat.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.25F);
+            this.tbxmonat.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.tbxmonat.Location = new System.Drawing.Point(369, 371);
+            this.tbxmonat.Multiline = true;
+            this.tbxmonat.Name = "tbxmonat";
+            this.tbxmonat.Size = new System.Drawing.Size(138, 55);
+            this.tbxmonat.TabIndex = 6;
+            this.tbxmonat.Text = "Monat";
+            this.tbxmonat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tbxjahr
+            // 
+            this.tbxjahr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
+            this.tbxjahr.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbxjahr.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.25F);
+            this.tbxjahr.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.tbxjahr.Location = new System.Drawing.Point(513, 371);
+            this.tbxjahr.Multiline = true;
+            this.tbxjahr.Name = "tbxjahr";
+            this.tbxjahr.Size = new System.Drawing.Size(138, 55);
+            this.tbxjahr.TabIndex = 7;
+            this.tbxjahr.Text = "Jahr";
+            this.tbxjahr.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // Adminbenutzerhinzufügen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
             this.ClientSize = new System.Drawing.Size(970, 638);
-            this.Controls.Add(this.pbxzurueck);
-            this.Controls.Add(this.btnbenutzererstellen);
             this.Controls.Add(this.tbxjahr);
             this.Controls.Add(this.tbxmonat);
             this.Controls.Add(this.tbxtag);
+            this.Controls.Add(this.tbxnachname);
+            this.Controls.Add(this.tbxvorname);
+            this.Controls.Add(this.pbxzurueck);
+            this.Controls.Add(this.btnbenutzererstellen);
             this.Controls.Add(this.tbxpasswort);
             this.Controls.Add(this.tbxbenutzername);
             this.Controls.Add(this.lblLauncher);
@@ -187,10 +220,12 @@
         private System.Windows.Forms.Label lblgame;
         private System.Windows.Forms.TextBox tbxbenutzername;
         private System.Windows.Forms.TextBox tbxpasswort;
+        private System.Windows.Forms.Button btnbenutzererstellen;
+        private System.Windows.Forms.PictureBox pbxzurueck;
+        private System.Windows.Forms.TextBox tbxvorname;
+        private System.Windows.Forms.TextBox tbxnachname;
         private System.Windows.Forms.TextBox tbxtag;
         private System.Windows.Forms.TextBox tbxmonat;
         private System.Windows.Forms.TextBox tbxjahr;
-        private System.Windows.Forms.Button btnbenutzererstellen;
-        private System.Windows.Forms.PictureBox pbxzurueck;
     }
 }
