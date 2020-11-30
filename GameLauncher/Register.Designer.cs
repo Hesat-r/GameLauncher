@@ -200,7 +200,7 @@
             // 
             // btnRegister
             // 
-            this.btnRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(252)))), ((int)(((byte)(241)))));
+            this.btnRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(50)))), ((int)(((byte)(37)))));
             this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRegister.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegister.ForeColor = System.Drawing.Color.Black;
@@ -218,7 +218,7 @@
             this.lblgame.AutoSize = true;
             this.lblgame.BackColor = System.Drawing.Color.Transparent;
             this.lblgame.Font = new System.Drawing.Font("Paper Flowers", 91.75F);
-            this.lblgame.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(252)))), ((int)(((byte)(241)))));
+            this.lblgame.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(50)))), ((int)(((byte)(37)))));
             this.lblgame.Location = new System.Drawing.Point(104, 9);
             this.lblgame.Name = "lblgame";
             this.lblgame.Size = new System.Drawing.Size(207, 126);

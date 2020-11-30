@@ -56,7 +56,7 @@
             // lblgame
             // 
             this.lblgame.Font = new System.Drawing.Font("Paper Flowers", 100.75F);
-            this.lblgame.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(252)))), ((int)(((byte)(241)))));
+            this.lblgame.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(50)))), ((int)(((byte)(37)))));
             this.lblgame.Location = new System.Drawing.Point(158, 42);
             this.lblgame.Name = "lblgame";
             this.lblgame.Size = new System.Drawing.Size(386, 136);
@@ -93,7 +93,7 @@
             // 
             // btnbenutzererstellen
             // 
-            this.btnbenutzererstellen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(252)))), ((int)(((byte)(241)))));
+            this.btnbenutzererstellen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(50)))), ((int)(((byte)(37)))));
             this.btnbenutzererstellen.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnbenutzererstellen.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnbenutzererstellen.ForeColor = System.Drawing.Color.Black;

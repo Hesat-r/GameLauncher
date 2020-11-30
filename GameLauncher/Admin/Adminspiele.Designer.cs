@@ -56,7 +56,7 @@
             // lblgame
             // 
             this.lblgame.Font = new System.Drawing.Font("Paper Flowers", 100.75F);
-            this.lblgame.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(252)))), ((int)(((byte)(241)))));
+            this.lblgame.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(50)))), ((int)(((byte)(37)))));
             this.lblgame.Location = new System.Drawing.Point(172, 46);
             this.lblgame.Name = "lblgame";
             this.lblgame.Size = new System.Drawing.Size(386, 136);

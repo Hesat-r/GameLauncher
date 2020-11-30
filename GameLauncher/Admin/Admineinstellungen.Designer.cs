@@ -53,20 +53,20 @@
             this.lblLauncher.BackColor = System.Drawing.Color.Transparent;
             this.lblLauncher.Font = new System.Drawing.Font("Paper Flowers", 100.75F);
             this.lblLauncher.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(198)))), ((int)(((byte)(199)))));
-            this.lblLauncher.Location = new System.Drawing.Point(294, 54);
+            this.lblLauncher.Location = new System.Drawing.Point(287, 54);
             this.lblLauncher.Name = "lblLauncher";
-            this.lblLauncher.Size = new System.Drawing.Size(419, 136);
+            this.lblLauncher.Size = new System.Drawing.Size(395, 136);
             this.lblLauncher.TabIndex = 10;
             this.lblLauncher.Text = "Launcher";
             // 
             // lblgame
             // 
             this.lblgame.BackColor = System.Drawing.Color.Transparent;
-            this.lblgame.Font = new System.Drawing.Font("Paper Flowers", 100.75F);
-            this.lblgame.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(252)))), ((int)(((byte)(241)))));
-            this.lblgame.Location = new System.Drawing.Point(82, 51);
+            this.lblgame.Font = new System.Drawing.Font("Paper Flowers", 99.75F);
+            this.lblgame.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(50)))), ((int)(((byte)(37)))));
+            this.lblgame.Location = new System.Drawing.Point(82, 54);
             this.lblgame.Name = "lblgame";
-            this.lblgame.Size = new System.Drawing.Size(240, 136);
+            this.lblgame.Size = new System.Drawing.Size(234, 136);
             this.lblgame.TabIndex = 11;
             this.lblgame.Text = "Game";
             // 

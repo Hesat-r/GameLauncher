@@ -47,7 +47,7 @@
             // 
             this.lblLauncher.Font = new System.Drawing.Font("Paper Flowers", 100.75F);
             this.lblLauncher.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(198)))), ((int)(((byte)(199)))));
-            this.lblLauncher.Location = new System.Drawing.Point(278, 59);
+            this.lblLauncher.Location = new System.Drawing.Point(266, 59);
             this.lblLauncher.Name = "lblLauncher";
             this.lblLauncher.Size = new System.Drawing.Size(546, 136);
             this.lblLauncher.TabIndex = 9;
@@ -56,7 +56,7 @@
             // lblgame
             // 
             this.lblgame.Font = new System.Drawing.Font("Paper Flowers", 100.75F);
-            this.lblgame.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(252)))), ((int)(((byte)(241)))));
+            this.lblgame.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(50)))), ((int)(((byte)(37)))));
             this.lblgame.Location = new System.Drawing.Point(76, 59);
             this.lblgame.Name = "lblgame";
             this.lblgame.Size = new System.Drawing.Size(386, 136);
