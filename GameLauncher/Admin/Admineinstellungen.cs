@@ -23,5 +23,7 @@ namespace GameLauncher.Admin
             Adminmain Adminmain = new Adminmain();
             Adminmain.Show();
         }
+
+       
     }
 }

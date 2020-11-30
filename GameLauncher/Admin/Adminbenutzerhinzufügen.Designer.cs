@@ -47,7 +47,7 @@
             // 
             this.lblLauncher.Font = new System.Drawing.Font("Paper Flowers", 100.75F);
             this.lblLauncher.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(198)))), ((int)(((byte)(199)))));
-            this.lblLauncher.Location = new System.Drawing.Point(360, 42);
+            this.lblLauncher.Location = new System.Drawing.Point(345, 42);
             this.lblLauncher.Name = "lblLauncher";
             this.lblLauncher.Size = new System.Drawing.Size(546, 136);
             this.lblLauncher.TabIndex = 11;

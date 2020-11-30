@@ -67,7 +67,6 @@
             this.tbxBenutzerLogin.TabIndex = 1;
             this.tbxBenutzerLogin.Text = "Email";
             this.tbxBenutzerLogin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-          
             // 
             // pbxBenutzerLogin
             // 

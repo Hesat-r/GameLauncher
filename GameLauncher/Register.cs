@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GameLauncher.Admin;
 
 namespace GameLauncher
 {
@@ -20,11 +21,11 @@ namespace GameLauncher
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            
-            if (File.Exists(@"D:\Benutzer.csv"))
+           
+            if (File.Exists(@"benutzer.csv"))
             {
               
-                StreamWriter sw = File.AppendText(@"D:\Benutzer.csv");
+                StreamWriter sw = File.AppendText(@"benutzer.csv");
                 sw.Write(tbxVornameRegister.Text);
                 sw.Write(";");
                 sw.Write(tbxNameRegister.Text);

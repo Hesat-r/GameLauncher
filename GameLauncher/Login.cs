@@ -28,6 +28,8 @@ namespace GameLauncher
         public bool angemeldetadmin = false;
         public bool passwort = false;
         public bool benutzer = false;
+
+
         private void btnLogin_Click(object sender, EventArgs e)
         {
             //string[] benutzerfile = File.ReadAllLines(@"D:\Benutzer.csv");
@@ -43,10 +45,9 @@ namespace GameLauncher
 
             //}
             
-
-            if (File.Exists(@"D:\Benutzer.csv"))
+            if (File.Exists(@"benutzer.csv"))
             {
-                StreamReader sr = File.OpenText((@"D:\Benutzer.csv"));
+                StreamReader sr = File.OpenText((@"benutzer.csv"));
 
                 string geleseneZeile;
                 while (!sr.EndOfStream)

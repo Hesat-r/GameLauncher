@@ -34,20 +34,22 @@ namespace GameLauncher.Admin
         {
             if (File.Exists(@"D:\Benutzer.csv"))
             {
-                StreamWriter sw = new StreamWriter(@"D:\Benutzer.csv");
-                sw.WriteAsync(tbxvorname.Text);
-                sw.WriteAsync(";");
-                sw.WriteAsync(tbxnachname.Text);
-                sw.WriteAsync(";");
-                sw.WriteAsync(tbxbenutzername.Text);
-                sw.WriteAsync(";");
-                sw.WriteAsync(tbxpasswort.Text);
-                sw.WriteAsync(";");
-                sw.WriteAsync(tbxtag.Text);
-                sw.WriteAsync(";");
-                sw.WriteAsync(tbxmonat.Text);
-                sw.WriteAsync(";");
-                sw.WriteAsync(tbxjahr.Text);
+                StreamWriter sw = File.AppendText(@"D:\Benutzer.csv");
+                sw.Write(tbxvorname.Text);
+                sw.Write(";");
+                sw.Write(tbxnachname.Text);
+                sw.Write(";");
+                sw.Write(tbxbenutzername.Text);
+                sw.Write(";");
+                sw.Write(tbxpasswort.Text);
+                sw.Write(";");
+                sw.Write(tbxtag.Text);
+                sw.Write(".");
+                sw.Write(tbxmonat.Text);
+                sw.Write(".");
+                sw.Write(tbxjahr.Text);
+                sw.Write(";");
+                sw.WriteLine("0");
                 sw.Close();
             }
             else
