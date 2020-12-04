@@ -1,14 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using GameLauncher.Admin;
 
 namespace GameLauncher
 {
@@ -24,7 +16,7 @@ namespace GameLauncher
            
             if (File.Exists(@"benutzer.csv"))
             {
-              
+                int alter = DateTime.Today.Year - Convert.ToInt32(dtpgeburtstag.Value.Year);
                 StreamWriter sw = File.AppendText(@"benutzer.csv");
                 sw.Write(tbxVornameRegister.Text);
                 sw.Write(";");
@@ -34,23 +26,22 @@ namespace GameLauncher
                 sw.Write(";");
                 sw.Write(tbxPasswortRegister.Text);
                 sw.Write(";");
-                sw.Write(tbxtag.Text);
-                sw.Write(".");
-                sw.Write(tbxmonat.Text);
-                sw.Write(".");
-                sw.Write(tbxjahr.Text);
+                sw.Write(dtpgeburtstag.Text);
                 sw.Write(";");
                 if (rbtnadminrechte.Checked == true)
                 {
-                    sw.WriteLine("1");
+                    sw.Write("1");
                 }
                 else
                 {
-                    sw.WriteLine("0");
+                    sw.Write("0");
                 }
 
-                
+                sw.Write(";");
+                sw.WriteLine(alter);
                 sw.Close();
+               
+               
             }
 
             this.Hide();

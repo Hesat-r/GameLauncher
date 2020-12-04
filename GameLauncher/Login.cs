@@ -32,22 +32,11 @@ namespace GameLauncher
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            //string[] benutzerfile = File.ReadAllLines(@"D:\Benutzer.csv");
+ 
             
-            //foreach (var benutzer in benutzerfile)
-            //{
-            //    string[] spalten = benutzer.Split(';');
-            //    Console.WriteLine(spalten[2]);
-
-            //    string[] passwortspalte = benutzer.Split(';');
-            //    Console.WriteLine(passwortspalte[4]);
-
-
-            //}
-            
-            if (File.Exists(@"benutzer.csv"))
+            if (File.Exists(@"Benutzer.csv"))
             {
-                StreamReader sr = File.OpenText((@"benutzer.csv"));
+                StreamReader sr = File.OpenText((@"Benutzer.csv"));
 
                 string geleseneZeile;
                 while (!sr.EndOfStream)
@@ -95,6 +84,11 @@ namespace GameLauncher
 
                 }
                 sr.Close();
+            }
+            else
+            {
+                File.Create(@"Benutzer.csv");
+                return;
             }
 
 

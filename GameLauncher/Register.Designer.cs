@@ -47,9 +47,7 @@
             this.pnlrechte = new System.Windows.Forms.Panel();
             this.rbtnadminrechte = new System.Windows.Forms.RadioButton();
             this.rbtbenutzerrechte = new System.Windows.Forms.RadioButton();
-            this.tbxjahr = new System.Windows.Forms.TextBox();
-            this.tbxmonat = new System.Windows.Forms.TextBox();
-            this.tbxtag = new System.Windows.Forms.TextBox();
+            this.dtpgeburtstag = new System.Windows.Forms.DateTimePicker();
             this.pnlBenutzer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxBenutzerLogin)).BeginInit();
             this.pnlpasswort.SuspendLayout();
@@ -266,47 +264,16 @@
             this.rbtbenutzerrechte.Text = "Benutzer";
             this.rbtbenutzerrechte.UseVisualStyleBackColor = true;
             // 
-            // tbxjahr
+            // dtpgeburtstag
             // 
-            this.tbxjahr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
-            this.tbxjahr.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbxjahr.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.25F);
-            this.tbxjahr.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.tbxjahr.Location = new System.Drawing.Point(441, 439);
-            this.tbxjahr.Multiline = true;
-            this.tbxjahr.Name = "tbxjahr";
-            this.tbxjahr.Size = new System.Drawing.Size(138, 55);
-            this.tbxjahr.TabIndex = 11;
-            this.tbxjahr.Text = "Jahr";
-            this.tbxjahr.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // tbxmonat
-            // 
-            this.tbxmonat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
-            this.tbxmonat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbxmonat.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.25F);
-            this.tbxmonat.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.tbxmonat.Location = new System.Drawing.Point(297, 439);
-            this.tbxmonat.Multiline = true;
-            this.tbxmonat.Name = "tbxmonat";
-            this.tbxmonat.Size = new System.Drawing.Size(138, 55);
-            this.tbxmonat.TabIndex = 10;
-            this.tbxmonat.Text = "Monat";
-            this.tbxmonat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // tbxtag
-            // 
-            this.tbxtag.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
-            this.tbxtag.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbxtag.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.25F);
-            this.tbxtag.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.tbxtag.Location = new System.Drawing.Point(157, 439);
-            this.tbxtag.Multiline = true;
-            this.tbxtag.Name = "tbxtag";
-            this.tbxtag.Size = new System.Drawing.Size(134, 55);
-            this.tbxtag.TabIndex = 9;
-            this.tbxtag.Text = "Tag";
-            this.tbxtag.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.dtpgeburtstag.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
+            this.dtpgeburtstag.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText;
+            this.dtpgeburtstag.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
+            this.dtpgeburtstag.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.dtpgeburtstag.Location = new System.Drawing.Point(263, 454);
+            this.dtpgeburtstag.Name = "dtpgeburtstag";
+            this.dtpgeburtstag.Size = new System.Drawing.Size(200, 20);
+            this.dtpgeburtstag.TabIndex = 9;
             // 
             // Register
             // 
@@ -314,9 +281,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
             this.ClientSize = new System.Drawing.Size(704, 634);
-            this.Controls.Add(this.tbxjahr);
-            this.Controls.Add(this.tbxmonat);
-            this.Controls.Add(this.tbxtag);
+            this.Controls.Add(this.dtpgeburtstag);
             this.Controls.Add(this.pnlrechte);
             this.Controls.Add(this.lbllauncher);
             this.Controls.Add(this.lblgame);
@@ -371,8 +336,6 @@
         private System.Windows.Forms.Panel pnlrechte;
         private System.Windows.Forms.RadioButton rbtnadminrechte;
         private System.Windows.Forms.RadioButton rbtbenutzerrechte;
-        private System.Windows.Forms.TextBox tbxjahr;
-        private System.Windows.Forms.TextBox tbxmonat;
-        private System.Windows.Forms.TextBox tbxtag;
+        private System.Windows.Forms.DateTimePicker dtpgeburtstag;
     }
 }

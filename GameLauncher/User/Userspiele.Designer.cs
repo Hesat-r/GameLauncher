@@ -32,27 +32,28 @@
             this.lblLauncher = new System.Windows.Forms.Label();
             this.lblgame = new System.Windows.Forms.Label();
             this.pbxzurueck = new System.Windows.Forms.PictureBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.lbxspiele = new System.Windows.Forms.ListBox();
             this.tbxspielenamen = new System.Windows.Forms.TextBox();
             this.btnspielepfad = new System.Windows.Forms.Button();
             this.pnlspielehinzufuegen = new System.Windows.Forms.Panel();
-            this.lblspielehinzufügen = new System.Windows.Forms.Label();
             this.btnspielhinzufuegen = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblspielehinzufügen = new System.Windows.Forms.Label();
+            this.pnlspiellöschen = new System.Windows.Forms.Panel();
+            this.btnspiellöschen = new System.Windows.Forms.Button();
+            this.lblspiellöschen = new System.Windows.Forms.Label();
+            this.btnspielepfadlöschen = new System.Windows.Forms.Button();
+            this.tbxspielenamenlöschen = new System.Windows.Forms.TextBox();
+            this.btnspielstarten = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbxzurueck)).BeginInit();
             this.pnlspielehinzufuegen.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.pnlspiellöschen.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblLauncher
             // 
             this.lblLauncher.Font = new System.Drawing.Font("Paper Flowers", 99.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLauncher.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(198)))), ((int)(((byte)(199)))));
-            this.lblLauncher.Location = new System.Drawing.Point(327, 41);
+            this.lblLauncher.Location = new System.Drawing.Point(315, 45);
             this.lblLauncher.Name = "lblLauncher";
             this.lblLauncher.Size = new System.Drawing.Size(404, 136);
             this.lblLauncher.TabIndex = 9;
@@ -62,7 +63,7 @@
             // 
             this.lblgame.Font = new System.Drawing.Font("Paper Flowers", 99.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblgame.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(50)))), ((int)(((byte)(37)))));
-            this.lblgame.Location = new System.Drawing.Point(133, 44);
+            this.lblgame.Location = new System.Drawing.Point(120, 45);
             this.lblgame.Name = "lblgame";
             this.lblgame.Size = new System.Drawing.Size(244, 136);
             this.lblgame.TabIndex = 8;
@@ -80,17 +81,18 @@
             this.pbxzurueck.TabStop = false;
             this.pbxzurueck.Click += new System.EventHandler(this.pbxzurueck_Click);
             // 
-            // listBox1
+            // lbxspiele
             // 
-            this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
-            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.listBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(198)))), ((int)(((byte)(199)))));
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(33, 183);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(289, 464);
-            this.listBox1.TabIndex = 12;
+            this.lbxspiele.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
+            this.lbxspiele.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.lbxspiele.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(198)))), ((int)(((byte)(199)))));
+            this.lbxspiele.FormattingEnabled = true;
+            this.lbxspiele.ItemHeight = 20;
+            this.lbxspiele.Location = new System.Drawing.Point(21, 181);
+            this.lbxspiele.Name = "lbxspiele";
+            this.lbxspiele.Size = new System.Drawing.Size(289, 464);
+            this.lbxspiele.TabIndex = 12;
+            this.lbxspiele.SelectedIndexChanged += new System.EventHandler(this.lbxspiele_SelectedIndexChanged);
             // 
             // tbxspielenamen
             // 
@@ -132,17 +134,6 @@
             this.pnlspielehinzufuegen.Size = new System.Drawing.Size(284, 225);
             this.pnlspielehinzufuegen.TabIndex = 15;
             // 
-            // lblspielehinzufügen
-            // 
-            this.lblspielehinzufügen.AutoSize = true;
-            this.lblspielehinzufügen.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F);
-            this.lblspielehinzufügen.ForeColor = System.Drawing.Color.White;
-            this.lblspielehinzufügen.Location = new System.Drawing.Point(3, 0);
-            this.lblspielehinzufügen.Name = "lblspielehinzufügen";
-            this.lblspielehinzufügen.Size = new System.Drawing.Size(175, 26);
-            this.lblspielehinzufügen.TabIndex = 15;
-            this.lblspielehinzufügen.Text = "spielehinzufügen";
-            // 
             // btnspielhinzufuegen
             // 
             this.btnspielhinzufuegen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(50)))), ((int)(((byte)(37)))));
@@ -157,70 +148,96 @@
             this.btnspielhinzufuegen.Text = "Spielhinzufügen";
             this.btnspielhinzufuegen.UseVisualStyleBackColor = false;
             // 
-            // panel1
+            // lblspielehinzufügen
             // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Location = new System.Drawing.Point(350, 180);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(284, 225);
-            this.panel1.TabIndex = 16;
+            this.lblspielehinzufügen.AutoSize = true;
+            this.lblspielehinzufügen.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F);
+            this.lblspielehinzufügen.ForeColor = System.Drawing.Color.White;
+            this.lblspielehinzufügen.Location = new System.Drawing.Point(3, 0);
+            this.lblspielehinzufügen.Name = "lblspielehinzufügen";
+            this.lblspielehinzufügen.Size = new System.Drawing.Size(175, 26);
+            this.lblspielehinzufügen.TabIndex = 15;
+            this.lblspielehinzufügen.Text = "spielehinzufügen";
             // 
-            // button1
+            // pnlspiellöschen
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(50)))), ((int)(((byte)(37)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(3, 159);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(276, 52);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "Spielhinzufügen";
-            this.button1.UseVisualStyleBackColor = false;
+            this.pnlspiellöschen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlspiellöschen.Controls.Add(this.btnspiellöschen);
+            this.pnlspiellöschen.Controls.Add(this.lblspiellöschen);
+            this.pnlspiellöschen.Controls.Add(this.btnspielepfadlöschen);
+            this.pnlspiellöschen.Controls.Add(this.tbxspielenamenlöschen);
+            this.pnlspiellöschen.Location = new System.Drawing.Point(350, 180);
+            this.pnlspiellöschen.Name = "pnlspiellöschen";
+            this.pnlspiellöschen.Size = new System.Drawing.Size(284, 225);
+            this.pnlspiellöschen.TabIndex = 16;
             // 
-            // label1
+            // btnspiellöschen
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(175, 26);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "spielehinzufügen";
+            this.btnspiellöschen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(50)))), ((int)(((byte)(37)))));
+            this.btnspiellöschen.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnspiellöschen.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnspiellöschen.ForeColor = System.Drawing.Color.Black;
+            this.btnspiellöschen.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnspiellöschen.Location = new System.Drawing.Point(3, 159);
+            this.btnspiellöschen.Name = "btnspiellöschen";
+            this.btnspiellöschen.Size = new System.Drawing.Size(276, 52);
+            this.btnspiellöschen.TabIndex = 16;
+            this.btnspiellöschen.Text = "Spielhinzufügen";
+            this.btnspiellöschen.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // lblspiellöschen
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(50)))), ((int)(((byte)(37)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(3, 101);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(276, 52);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "Spielepfad";
-            this.button2.UseVisualStyleBackColor = false;
+            this.lblspiellöschen.AutoSize = true;
+            this.lblspiellöschen.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F);
+            this.lblspiellöschen.ForeColor = System.Drawing.Color.White;
+            this.lblspiellöschen.Location = new System.Drawing.Point(3, 0);
+            this.lblspiellöschen.Name = "lblspiellöschen";
+            this.lblspiellöschen.Size = new System.Drawing.Size(144, 26);
+            this.lblspiellöschen.TabIndex = 15;
+            this.lblspiellöschen.Text = "spielelöschen";
             // 
-            // textBox1
+            // btnspielepfadlöschen
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Arial", 16.25F);
-            this.textBox1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox1.Location = new System.Drawing.Point(-1, 42);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(280, 53);
-            this.textBox1.TabIndex = 13;
-            this.textBox1.Text = "spielename";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnspielepfadlöschen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(50)))), ((int)(((byte)(37)))));
+            this.btnspielepfadlöschen.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnspielepfadlöschen.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnspielepfadlöschen.ForeColor = System.Drawing.Color.Black;
+            this.btnspielepfadlöschen.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnspielepfadlöschen.Location = new System.Drawing.Point(3, 101);
+            this.btnspielepfadlöschen.Name = "btnspielepfadlöschen";
+            this.btnspielepfadlöschen.Size = new System.Drawing.Size(276, 52);
+            this.btnspielepfadlöschen.TabIndex = 14;
+            this.btnspielepfadlöschen.Text = "Spielepfad";
+            this.btnspielepfadlöschen.UseVisualStyleBackColor = false;
+            // 
+            // tbxspielenamenlöschen
+            // 
+            this.tbxspielenamenlöschen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
+            this.tbxspielenamenlöschen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbxspielenamenlöschen.Font = new System.Drawing.Font("Arial", 16.25F);
+            this.tbxspielenamenlöschen.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.tbxspielenamenlöschen.Location = new System.Drawing.Point(-1, 42);
+            this.tbxspielenamenlöschen.Multiline = true;
+            this.tbxspielenamenlöschen.Name = "tbxspielenamenlöschen";
+            this.tbxspielenamenlöschen.Size = new System.Drawing.Size(280, 53);
+            this.tbxspielenamenlöschen.TabIndex = 13;
+            this.tbxspielenamenlöschen.Text = "spielename";
+            this.tbxspielenamenlöschen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // btnspielstarten
+            // 
+            this.btnspielstarten.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(50)))), ((int)(((byte)(37)))));
+            this.btnspielstarten.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnspielstarten.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnspielstarten.ForeColor = System.Drawing.Color.Black;
+            this.btnspielstarten.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnspielstarten.Location = new System.Drawing.Point(701, 608);
+            this.btnspielstarten.Name = "btnspielstarten";
+            this.btnspielstarten.Size = new System.Drawing.Size(276, 52);
+            this.btnspielstarten.TabIndex = 17;
+            this.btnspielstarten.Text = "Spielestarten";
+            this.btnspielstarten.UseVisualStyleBackColor = false;
+            this.btnspielstarten.Click += new System.EventHandler(this.btnspielstarten_Click);
             // 
             // Userspiele
             // 
@@ -228,20 +245,21 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
             this.ClientSize = new System.Drawing.Size(989, 672);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.btnspielstarten);
+            this.Controls.Add(this.pnlspiellöschen);
             this.Controls.Add(this.pnlspielehinzufuegen);
             this.Controls.Add(this.pbxzurueck);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.lbxspiele);
             this.Controls.Add(this.lblLauncher);
             this.Controls.Add(this.lblgame);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Userspiele";
             this.Text = "Userspiele";
+            this.Load += new System.EventHandler(this.Userspiele_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbxzurueck)).EndInit();
             this.pnlspielehinzufuegen.ResumeLayout(false);
             this.pnlspielehinzufuegen.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.pnlspiellöschen.ResumeLayout(false);
+            this.pnlspiellöschen.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -251,16 +269,17 @@
         private System.Windows.Forms.Label lblLauncher;
         private System.Windows.Forms.Label lblgame;
         private System.Windows.Forms.PictureBox pbxzurueck;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox lbxspiele;
         private System.Windows.Forms.TextBox tbxspielenamen;
         private System.Windows.Forms.Button btnspielepfad;
         private System.Windows.Forms.Panel pnlspielehinzufuegen;
         private System.Windows.Forms.Label lblspielehinzufügen;
         private System.Windows.Forms.Button btnspielhinzufuegen;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Panel pnlspiellöschen;
+        private System.Windows.Forms.Button btnspiellöschen;
+        private System.Windows.Forms.Label lblspiellöschen;
+        private System.Windows.Forms.Button btnspielepfadlöschen;
+        private System.Windows.Forms.TextBox tbxspielenamenlöschen;
+        private System.Windows.Forms.Button btnspielstarten;
     }
 }
