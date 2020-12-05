@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,7 +17,10 @@ namespace GameLauncher.Admin
         {
             InitializeComponent();
         }
-
+        public List<string> Name = new List<string>();
+        public List<string> Pfad = new List<string>();
+        public List<string> Alter = new List<string>();
+        public string benutzeralter;
         private void pbxzurueck_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -24,11 +28,45 @@ namespace GameLauncher.Admin
             Adminmain.Show();
         }
 
-        private void pbxspielhinzufuegen_Click(object sender, EventArgs e)
+       
+        private void Adminspiele_Load(object sender, EventArgs e)
         {
-            this.Hide();
-            Adminspielhinzufuegen Adminsp = new Adminspielhinzufuegen();
-            Adminsp.Show();
+            StreamReader sr = File.OpenText((@"Spiele.csv"));
+
+            string geleseneZeile;
+            while (!sr.EndOfStream)
+            {
+
+                geleseneZeile = sr.ReadLine();
+                string[] spalten = geleseneZeile.Split(';');
+
+                Name.Add(spalten[0]);
+                Pfad.Add(spalten[1]);
+                Alter.Add(spalten[2]);
+
+                lbxspiele.Items.Add(spalten[0]);
+
+            }
+            sr.Close();
+           
+        }
+
+    
+        private void btnspiellöschen_Click(object sender, EventArgs e)
+        {
+            if (File.Exists(@"Spiele.csv"))
+            {
+                StreamWriter sw = File.AppendText(@"spiele.csv");
+
+                sw.Write(tbxspielenamen.Text);
+                sw.Write(";");
+                
+            }
+        }
+
+        private void btnspielhinzufuegne_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

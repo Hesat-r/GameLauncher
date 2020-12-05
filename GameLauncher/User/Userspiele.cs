@@ -28,37 +28,42 @@ namespace GameLauncher.User
         }
 
     
-        private void pbxminecraftspielen_Click(object sender, EventArgs e)
-        {
-            string minecraft = "";
-            if (File.Exists(minecraft))
-            {
-                Process PhasmoStarten2 = new Process();
-                PhasmoStarten2.StartInfo.UseShellExecute = false;
-                PhasmoStarten2.StartInfo.FileName = minecraft;
-                PhasmoStarten2.StartInfo.CreateNoWindow = false;
-                PhasmoStarten2.Start();
-            }
-            else
-            {
-                
-                MessageBox.Show("Datei nicht vorhanden", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+       
         public List<string> Name = new List<string>();
         public List<string> Pfad = new List<string>();
         public List<string> Alter = new List<string>();
         public string benutzeralter;
-        private void lbxspiele_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           
-        }
+      
 
         private void btnspielstarten_Click(object sender, EventArgs e)
         {
             int index = lbxspiele.SelectedIndex;
-            MessageBox.Show(Pfad[index],Alter[index],MessageBoxButtons.OK);
-            MessageBox.Show(Convert.ToString(benutzeralter), "hi", MessageBoxButtons.OK);
+           
+           // ALTER ABFRAGE!
+            if (Convert.ToInt32(benutzeralter) <= Convert.ToInt32(Alter[index]))
+            {
+                MessageBox.Show("Du Hast noch nicht das alter erreicht um das spiel spielen zu können", "Fehler", MessageBoxButtons.OK);
+                
+            }
+            else
+            {
+                
+                if (File.Exists(Pfad[index]))
+                {
+                    Process spielstarten = new Process();
+                    spielstarten.StartInfo.UseShellExecute = false;
+                    spielstarten.StartInfo.FileName = Pfad[index];
+                    spielstarten.Start();
+                    MessageBox.Show("Spiel erfolgreich gestartet", "Erfolgreich", MessageBoxButtons.OK);
+                }
+                else
+                {
+                    MessageBox.Show("Spiel Konnte nicht gestartet werden", "Fehler", MessageBoxButtons.OK);
+                }
+               
+
+            }
+            
 
 
         }
