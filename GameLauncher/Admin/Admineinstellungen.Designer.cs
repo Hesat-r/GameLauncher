@@ -129,6 +129,7 @@
             this.pbxlog.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxlog.TabIndex = 10;
             this.pbxlog.TabStop = false;
+            this.pbxlog.Click += new System.EventHandler(this.pbxlog_Click);
             // 
             // pnlzurueck
             // 

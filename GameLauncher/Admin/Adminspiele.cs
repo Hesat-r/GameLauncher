@@ -22,7 +22,7 @@ namespace GameLauncher.Admin
         public List<string> Alter = new List<string>();
         public List<string> beschreibung = new List<string>();
         public string benutzeralter;
-        public string pfadhinzufuegen;
+        public string ausgewählterpfad;
         private void pbxzurueck_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -53,22 +53,40 @@ namespace GameLauncher.Admin
            
         }
 
-    
+        //Funkioniert zurzeit nicht da dieganzezit dort steht das die array zu klein oder zu gr0ß ist was kein sinn macht
         private void btnspiellöschen_Click(object sender, EventArgs e)
         {
             if (File.Exists(@"Spiele.csv"))
             {
-                StreamWriter sw = File.AppendText(@"spiele.csv");
+                int index = lbxspiele.SelectedIndex;
+                Pfad.Remove(Pfad[index]);
+                Alter.Remove(Alter[index]);
+                beschreibung.Remove(beschreibung[index]);
+                lbxspiele.Items.Remove(Name[index]);
+                
+                int anzahl = Name.Count;
+                for (int i = 0; i < anzahl; i++)
+                {
+                    if (File.Exists(@"Spiele.csv"))
+                    {
+                        using (System.IO.StreamWriter file =
+                         new System.IO.StreamWriter(@"spiele.csv", true))
+                        {
+                            file.Write(Name[i]);
+                            file.Write(";");
+                            file.Write(Pfad[i]);
+                            file.Write(";");
+                            file.Write(Alter[i]);
+                            file.Write(";");
+                            file.Write(beschreibung[i]);
+                            file.Write(";");
+                            file.WriteLine("");
+                        }
+                    }
+                }
 
-                sw.Write(tbxspielenamen.Text);
-                sw.Write(";");
-                sw.Write(pfadhinzufuegen);
-                sw.Write(";");
-                sw.Write(tbxspielealterhinzufuegen.Text);
-                sw.Write(";");
-                sw.WriteLine(tbxbeschreibung.Text);
-                sw.Close();
             }
+
         }
 
         private void btnspielhinzufuegne_Click(object sender, EventArgs e)
@@ -76,10 +94,9 @@ namespace GameLauncher.Admin
             if (File.Exists(@"Spiele.csv"))
             {
                 StreamWriter sw = File.AppendText(@"spiele.csv");
-                MessageBox.Show(pfadhinzufuegen, "test", MessageBoxButtons.OK);
                 sw.Write(tbxspielenamen.Text);
                 sw.Write(";");
-                sw.Write(pfadhinzufuegen);
+                sw.Write(ausgewählterpfad);
                 sw.Write(";");
                 sw.Write(tbxspielealterhinzufuegen.Text);
                 sw.Write(";");
@@ -94,8 +111,24 @@ namespace GameLauncher.Admin
         {
             OpenFileDialog ofd = new OpenFileDialog();
             ofd.ShowDialog();
-            pfadhinzufuegen = ofd.FileName;
-            MessageBox.Show(pfadhinzufuegen, "test", MessageBoxButtons.OK);
+            ausgewählterpfad = ofd.FileName;
+            MessageBox.Show(ausgewählterpfad, "test", MessageBoxButtons.OK);
+        }
+
+        private void lbxspiele_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int index = lbxspiele.SelectedIndex;
+
+            if(index == -1)
+            {
+                index++;
+              
+            }
+            else
+            {
+                tbxspielenamenlöschen.Text = Name[index];
+                tbxspielealter.Text = Alter[index];
+            }
         }
     }
 }

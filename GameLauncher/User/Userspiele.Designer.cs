@@ -148,7 +148,6 @@
             this.Controls.Add(this.lblLauncher);
             this.Controls.Add(this.lblgame);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Userspiele";
             this.Text = "Userspiele";
             this.Load += new System.EventHandler(this.Userspiele_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbxzurueck)).EndInit();

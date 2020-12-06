@@ -100,12 +100,6 @@
     <Compile Include="Admin\Adminspiele.Designer.cs">
       <DependentUpon>Adminspiele.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Adminspielhinzufuegen.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admin\Adminspielhinzufuegen.Designer.cs">
-      <DependentUpon>Adminspielhinzufuegen.cs</DependentUpon>
-    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,9 +140,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\Adminspiele.resx">
       <DependentUpon>Adminspiele.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Admin\Adminspielhinzufuegen.resx">
-      <DependentUpon>Adminspielhinzufuegen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

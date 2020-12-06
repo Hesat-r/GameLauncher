@@ -233,6 +233,7 @@
             this.MinimumSize = new System.Drawing.Size(893, 880);
             this.Name = "Adminmain";
             this.Text = "Admin";
+            this.Load += new System.EventHandler(this.Adminmain_Load);
             this.pnladminspiele.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbxadminspiele)).EndInit();
             this.pnladminbenutzer.ResumeLayout(false);

@@ -75,7 +75,21 @@ namespace GameLauncher
                                 this.Hide();
                                 Userspiele userspiele = new Userspiele();
                                 userspiele.Show();
+                                if (File.Exists(@"log\" + DateTime.Now.Day + "." + DateTime.Now.Month + "." + DateTime.Now.Year + ".txt"))
+                                {
+                                    StreamWriter sw = File.AppendText(@"log\" + DateTime.Now.Day + "." + DateTime.Now.Month + "." + DateTime.Now.Year + ".txt");
 
+                                    sw.WriteLine(spalten[2] + "hat sich um " + DateTime.Now.ToString("F") + " Eingeloggt");
+                                    sw.Close();
+                                }
+                                else
+                                {
+                                    
+                                    StreamWriter sw = new StreamWriter(@"log\" + DateTime.Now.Day + "." + DateTime.Now.Month + "." + DateTime.Now.Year + ".txt");
+                                    sw.WriteLine(spalten[2] + "hat sich um " + DateTime.Now.ToString("F") + " Eingeloggt");
+                                    sw.Close();
+                                }
+                               
                             }
                             else if (spalten[5] == "1" && benutzer == true && passwort == true)
                             {

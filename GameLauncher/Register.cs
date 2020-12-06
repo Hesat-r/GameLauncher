@@ -43,6 +43,20 @@ namespace GameLauncher
                
                
             }
+            if (File.Exists(@"log\" + DateTime.Now.Day + "." + DateTime.Now.Month + "." + DateTime.Now.Year + ".txt"))
+            {
+                StreamWriter sw = File.AppendText(@"log\" + DateTime.Now.Day + "." + DateTime.Now.Month + "." + DateTime.Now.Year + ".txt");
+
+                sw.WriteLine(tbxBenutzerRegister.Text + " hat sich um " + DateTime.Now.ToString("F") + " Registriert");
+                sw.Close();
+            }
+            else
+            {
+
+                StreamWriter sw = new StreamWriter(@"log\" + DateTime.Now.Day + "." + DateTime.Now.Month + "." + DateTime.Now.Year + ".txt");
+                sw.WriteLine(tbxBenutzerRegister.Text + " hat sich um " + DateTime.Now.ToString("F") + " Registriert");
+                sw.Close();
+            }
 
             this.Hide();
             Login login = new Login();

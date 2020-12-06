@@ -174,6 +174,7 @@
             this.lbxspiele.Name = "lbxspiele";
             this.lbxspiele.Size = new System.Drawing.Size(343, 584);
             this.lbxspiele.TabIndex = 18;
+            this.lbxspiele.SelectedIndexChanged += new System.EventHandler(this.lbxspiele_SelectedIndexChanged);
             // 
             // pnlspielehinzufuegen
             // 
