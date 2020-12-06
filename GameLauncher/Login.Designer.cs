@@ -60,19 +60,17 @@
             this.tbxBenutzerLogin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbxBenutzerLogin.Font = new System.Drawing.Font("Arial", 22.25F);
             this.tbxBenutzerLogin.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.tbxBenutzerLogin.Location = new System.Drawing.Point(84, 0);
-            this.tbxBenutzerLogin.Multiline = true;
+            this.tbxBenutzerLogin.Location = new System.Drawing.Point(84, 14);
             this.tbxBenutzerLogin.Name = "tbxBenutzerLogin";
-            this.tbxBenutzerLogin.Size = new System.Drawing.Size(370, 53);
+            this.tbxBenutzerLogin.Size = new System.Drawing.Size(370, 42);
             this.tbxBenutzerLogin.TabIndex = 1;
             this.tbxBenutzerLogin.Text = "Email";
             this.tbxBenutzerLogin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pbxBenutzerLogin
             // 
-            this.pbxBenutzerLogin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbxBenutzerLogin.Image = ((System.Drawing.Image)(resources.GetObject("pbxBenutzerLogin.Image")));
-            this.pbxBenutzerLogin.Location = new System.Drawing.Point(15, 0);
+            this.pbxBenutzerLogin.Location = new System.Drawing.Point(6, 3);
             this.pbxBenutzerLogin.Name = "pbxBenutzerLogin";
             this.pbxBenutzerLogin.Size = new System.Drawing.Size(72, 53);
             this.pbxBenutzerLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -90,24 +88,24 @@
             // 
             // tbxpasswort
             // 
+            this.tbxpasswort.AcceptsReturn = true;
             this.tbxpasswort.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
             this.tbxpasswort.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbxpasswort.Font = new System.Drawing.Font("Arial", 22.25F);
             this.tbxpasswort.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.tbxpasswort.Location = new System.Drawing.Point(81, 3);
-            this.tbxpasswort.Multiline = true;
+            this.tbxpasswort.Location = new System.Drawing.Point(81, 14);
             this.tbxpasswort.Name = "tbxpasswort";
-            this.tbxpasswort.Size = new System.Drawing.Size(370, 53);
+            this.tbxpasswort.PasswordChar = '*';
+            this.tbxpasswort.Size = new System.Drawing.Size(370, 42);
             this.tbxpasswort.TabIndex = 2;
             this.tbxpasswort.Text = "Passwort";
             this.tbxpasswort.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.tbxpasswort.UseSystemPasswordChar = true;
+            this.tbxpasswort.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbxpasswort_KeyDown);
             // 
             // pbxpasswort
             // 
-            this.pbxpasswort.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbxpasswort.Image = ((System.Drawing.Image)(resources.GetObject("pbxpasswort.Image")));
-            this.pbxpasswort.Location = new System.Drawing.Point(15, 3);
+            this.pbxpasswort.Location = new System.Drawing.Point(6, 3);
             this.pbxpasswort.Name = "pbxpasswort";
             this.pbxpasswort.Size = new System.Drawing.Size(72, 53);
             this.pbxpasswort.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -116,7 +114,7 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(252)))), ((int)(((byte)(241)))));
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(50)))), ((int)(((byte)(37)))));
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLogin.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.Black;
@@ -133,8 +131,8 @@
             // 
             this.lblgame.AutoSize = true;
             this.lblgame.Font = new System.Drawing.Font("Paper Flowers", 102.25F);
-            this.lblgame.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(252)))), ((int)(((byte)(241)))));
-            this.lblgame.Location = new System.Drawing.Point(161, 61);
+            this.lblgame.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(50)))), ((int)(((byte)(37)))));
+            this.lblgame.Location = new System.Drawing.Point(101, 58);
             this.lblgame.Name = "lblgame";
             this.lblgame.Size = new System.Drawing.Size(231, 141);
             this.lblgame.TabIndex = 4;
@@ -145,7 +143,7 @@
             this.lbllauncher.AutoSize = true;
             this.lbllauncher.Font = new System.Drawing.Font("Paper Flowers", 82.25F);
             this.lbllauncher.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(198)))), ((int)(((byte)(199)))));
-            this.lbllauncher.Location = new System.Drawing.Point(252, 189);
+            this.lbllauncher.Location = new System.Drawing.Point(248, 190);
             this.lbllauncher.Name = "lbllauncher";
             this.lbllauncher.Size = new System.Drawing.Size(315, 113);
             this.lbllauncher.TabIndex = 5;
@@ -153,7 +151,7 @@
             // 
             // btnregister
             // 
-            this.btnregister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(252)))), ((int)(((byte)(241)))));
+            this.btnregister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(50)))), ((int)(((byte)(37)))));
             this.btnregister.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnregister.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnregister.ForeColor = System.Drawing.Color.Black;
@@ -161,7 +159,7 @@
             this.btnregister.Location = new System.Drawing.Point(389, 521);
             this.btnregister.Name = "btnregister";
             this.btnregister.Size = new System.Drawing.Size(197, 67);
-            this.btnregister.TabIndex = 6;
+            this.btnregister.TabIndex = 4;
             this.btnregister.Text = "Registrieren";
             this.btnregister.UseVisualStyleBackColor = false;
             this.btnregister.Click += new System.EventHandler(this.btnregister_Click);

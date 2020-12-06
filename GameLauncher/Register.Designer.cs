@@ -74,19 +74,17 @@
             this.tbxBenutzerRegister.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbxBenutzerRegister.Font = new System.Drawing.Font("Arial", 22.25F);
             this.tbxBenutzerRegister.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.tbxBenutzerRegister.Location = new System.Drawing.Point(84, 0);
-            this.tbxBenutzerRegister.Multiline = true;
+            this.tbxBenutzerRegister.Location = new System.Drawing.Point(84, 9);
             this.tbxBenutzerRegister.Name = "tbxBenutzerRegister";
-            this.tbxBenutzerRegister.Size = new System.Drawing.Size(454, 53);
+            this.tbxBenutzerRegister.Size = new System.Drawing.Size(454, 42);
             this.tbxBenutzerRegister.TabIndex = 3;
             this.tbxBenutzerRegister.Text = "Benutzername";
             this.tbxBenutzerRegister.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pbxBenutzerLogin
             // 
-            this.pbxBenutzerLogin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbxBenutzerLogin.Image = ((System.Drawing.Image)(resources.GetObject("pbxBenutzerLogin.Image")));
-            this.pbxBenutzerLogin.Location = new System.Drawing.Point(15, 0);
+            this.pbxBenutzerLogin.Location = new System.Drawing.Point(3, 3);
             this.pbxBenutzerLogin.Name = "pbxBenutzerLogin";
             this.pbxBenutzerLogin.Size = new System.Drawing.Size(72, 53);
             this.pbxBenutzerLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -108,10 +106,9 @@
             this.tbxPasswortRegister.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbxPasswortRegister.Font = new System.Drawing.Font("Arial", 22.25F);
             this.tbxPasswortRegister.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.tbxPasswortRegister.Location = new System.Drawing.Point(81, 3);
-            this.tbxPasswortRegister.Multiline = true;
+            this.tbxPasswortRegister.Location = new System.Drawing.Point(81, 9);
             this.tbxPasswortRegister.Name = "tbxPasswortRegister";
-            this.tbxPasswortRegister.Size = new System.Drawing.Size(457, 53);
+            this.tbxPasswortRegister.Size = new System.Drawing.Size(457, 42);
             this.tbxPasswortRegister.TabIndex = 4;
             this.tbxPasswortRegister.Text = "Passwort";
             this.tbxPasswortRegister.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -119,9 +116,8 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(15, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(6, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(72, 53);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -143,19 +139,17 @@
             this.tbxNameRegister.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbxNameRegister.Font = new System.Drawing.Font("Arial", 22.25F);
             this.tbxNameRegister.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.tbxNameRegister.Location = new System.Drawing.Point(84, 0);
-            this.tbxNameRegister.Multiline = true;
+            this.tbxNameRegister.Location = new System.Drawing.Point(83, 8);
             this.tbxNameRegister.Name = "tbxNameRegister";
-            this.tbxNameRegister.Size = new System.Drawing.Size(179, 53);
+            this.tbxNameRegister.Size = new System.Drawing.Size(179, 42);
             this.tbxNameRegister.TabIndex = 1;
             this.tbxNameRegister.Text = "Name";
             this.tbxNameRegister.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pictureBox2
             // 
-            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(15, 0);
+            this.pictureBox2.Location = new System.Drawing.Point(6, 0);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(72, 53);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -177,19 +171,17 @@
             this.tbxVornameRegister.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbxVornameRegister.Font = new System.Drawing.Font("Arial", 22.25F);
             this.tbxVornameRegister.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.tbxVornameRegister.Location = new System.Drawing.Point(84, 0);
-            this.tbxVornameRegister.Multiline = true;
+            this.tbxVornameRegister.Location = new System.Drawing.Point(84, 8);
             this.tbxVornameRegister.Name = "tbxVornameRegister";
-            this.tbxVornameRegister.Size = new System.Drawing.Size(179, 53);
+            this.tbxVornameRegister.Size = new System.Drawing.Size(179, 42);
             this.tbxVornameRegister.TabIndex = 2;
             this.tbxVornameRegister.Text = "Vorname";
             this.tbxVornameRegister.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pictureBox3
             // 
-            this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(15, 0);
+            this.pictureBox3.Location = new System.Drawing.Point(6, 0);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(72, 53);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -206,7 +198,7 @@
             this.btnRegister.Location = new System.Drawing.Point(250, 555);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(197, 67);
-            this.btnRegister.TabIndex = 8;
+            this.btnRegister.TabIndex = 9;
             this.btnRegister.Text = "Register";
             this.btnRegister.UseVisualStyleBackColor = false;
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
@@ -241,15 +233,15 @@
             this.pnlrechte.Location = new System.Drawing.Point(197, 500);
             this.pnlrechte.Name = "pnlrechte";
             this.pnlrechte.Size = new System.Drawing.Size(315, 49);
-            this.pnlrechte.TabIndex = 5;
+            this.pnlrechte.TabIndex = 6;
             // 
             // rbtnadminrechte
             // 
             this.rbtnadminrechte.AutoSize = true;
-            this.rbtnadminrechte.Location = new System.Drawing.Point(184, 19);
+            this.rbtnadminrechte.Location = new System.Drawing.Point(246, 19);
             this.rbtnadminrechte.Name = "rbtnadminrechte";
             this.rbtnadminrechte.Size = new System.Drawing.Size(54, 17);
-            this.rbtnadminrechte.TabIndex = 7;
+            this.rbtnadminrechte.TabIndex = 8;
             this.rbtnadminrechte.TabStop = true;
             this.rbtnadminrechte.Text = "Admin";
             this.rbtnadminrechte.UseVisualStyleBackColor = true;
@@ -257,10 +249,10 @@
             // rbtbenutzerrechte
             // 
             this.rbtbenutzerrechte.AutoSize = true;
-            this.rbtbenutzerrechte.Location = new System.Drawing.Point(25, 19);
+            this.rbtbenutzerrechte.Location = new System.Drawing.Point(12, 19);
             this.rbtbenutzerrechte.Name = "rbtbenutzerrechte";
             this.rbtbenutzerrechte.Size = new System.Drawing.Size(67, 17);
-            this.rbtbenutzerrechte.TabIndex = 6;
+            this.rbtbenutzerrechte.TabIndex = 7;
             this.rbtbenutzerrechte.Text = "Benutzer";
             this.rbtbenutzerrechte.UseVisualStyleBackColor = true;
             // 
@@ -273,7 +265,8 @@
             this.dtpgeburtstag.Location = new System.Drawing.Point(263, 454);
             this.dtpgeburtstag.Name = "dtpgeburtstag";
             this.dtpgeburtstag.Size = new System.Drawing.Size(200, 20);
-            this.dtpgeburtstag.TabIndex = 9;
+            this.dtpgeburtstag.TabIndex = 5;
+            this.dtpgeburtstag.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dtpgeburtstag_KeyDown);
             // 
             // Register
             // 

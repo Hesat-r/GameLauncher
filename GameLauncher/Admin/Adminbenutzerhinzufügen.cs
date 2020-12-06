@@ -43,11 +43,7 @@ namespace GameLauncher.Admin
                 sw.Write(";");
                 sw.Write(tbxpasswort.Text);
                 sw.Write(";");
-                sw.Write(tbxtag.Text);
-                sw.Write(".");
-                sw.Write(tbxmonat.Text);
-                sw.Write(".");
-                sw.Write(tbxjahr.Text);
+                sw.Write(dtpgeburtstag.Text);
                 sw.Write(";");
                 sw.WriteLine("0");
                 sw.Close();

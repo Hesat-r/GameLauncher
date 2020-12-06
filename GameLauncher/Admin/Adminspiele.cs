@@ -20,7 +20,9 @@ namespace GameLauncher.Admin
         public List<string> Name = new List<string>();
         public List<string> Pfad = new List<string>();
         public List<string> Alter = new List<string>();
+        public List<string> beschreibung = new List<string>();
         public string benutzeralter;
+        public string pfadhinzufuegen;
         private void pbxzurueck_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -43,7 +45,7 @@ namespace GameLauncher.Admin
                 Name.Add(spalten[0]);
                 Pfad.Add(spalten[1]);
                 Alter.Add(spalten[2]);
-
+                beschreibung.Add(spalten[3]);
                 lbxspiele.Items.Add(spalten[0]);
 
             }
@@ -60,13 +62,40 @@ namespace GameLauncher.Admin
 
                 sw.Write(tbxspielenamen.Text);
                 sw.Write(";");
-                
+                sw.Write(pfadhinzufuegen);
+                sw.Write(";");
+                sw.Write(tbxspielealterhinzufuegen.Text);
+                sw.Write(";");
+                sw.WriteLine(tbxbeschreibung.Text);
+                sw.Close();
             }
         }
 
         private void btnspielhinzufuegne_Click(object sender, EventArgs e)
         {
+            if (File.Exists(@"Spiele.csv"))
+            {
+                StreamWriter sw = File.AppendText(@"spiele.csv");
+                MessageBox.Show(pfadhinzufuegen, "test", MessageBoxButtons.OK);
+                sw.Write(tbxspielenamen.Text);
+                sw.Write(";");
+                sw.Write(pfadhinzufuegen);
+                sw.Write(";");
+                sw.Write(tbxspielealterhinzufuegen.Text);
+                sw.Write(";");
+                sw.WriteLine(tbxbeschreibung.Text);
+                sw.Close();
+            }
             
+            
+        }
+
+        private void btnspielepfad_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.ShowDialog();
+            pfadhinzufuegen = ofd.FileName;
+            MessageBox.Show(pfadhinzufuegen, "test", MessageBoxButtons.OK);
         }
     }
 }

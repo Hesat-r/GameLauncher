@@ -28,12 +28,13 @@ namespace GameLauncher
         public bool angemeldetadmin = false;
         public bool passwort = false;
         public bool benutzer = false;
-
+        public bool admincheck = true;
+        public string[] spalten = null;
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
- 
-            
+
+
             if (File.Exists(@"Benutzer.csv"))
             {
                 StreamReader sr = File.OpenText((@"Benutzer.csv"));
@@ -42,47 +43,56 @@ namespace GameLauncher
                 while (!sr.EndOfStream)
                 {
                     geleseneZeile = sr.ReadLine();
-                    string[] spalten = geleseneZeile.Split(';');
+                    spalten = geleseneZeile.Split(';');
+
                     if (tbxBenutzerLogin.Text == spalten[2])
                     {
-                        
+                        benutzer = true;
                         if (tbxpasswort.Text == spalten[3])
                         {
-                            benutzer = true;
+
                             passwort = true;
                             MessageBox.Show("Erfolgreich eingelogt", "Erfolgreich", MessageBoxButtons.OK);
-
-                            if (spalten[5] == "1" && benutzer == true && passwort == true)
+                            //alter.txt datei erstellen und alter vom eingeloggten benutzer in einer txt datei abspeichern
+                            if (File.Exists(@"alter.txt"))
                             {
-                                angemeldetadmin = true;
+                                StreamWriter sw = new StreamWriter(@"alter.txt");
+                                sw.WriteLine(spalten[6]);
+                                sw.Close();
                             }
-                            else if (spalten[5] == "0" && benutzer == true && passwort == true)
+                            else
+                            {
+                                File.Create(@"alter.txt");
+                                StreamWriter sw = new StreamWriter(@"alter.txt");
+                                sw.WriteLine(spalten[6]);
+                                sw.Close();
+                            }
+
+                            if (spalten[5] == "0" && benutzer == true && passwort == true)
                             {
                                 angemeldet = true;
+                                MessageBox.Show(spalten[6], "test", MessageBoxButtons.OK);
+                                this.Hide();
+                                Userspiele userspiele = new Userspiele();
+                                userspiele.Show();
+
+                            }
+                            else if (spalten[5] == "1" && benutzer == true && passwort == true)
+                            {
+                                angemeldetadmin = true;
+                                MessageBox.Show(spalten[6], "test", MessageBoxButtons.OK);
+                                this.Hide();
+                                Adminmain adminmain = new Adminmain();
+                                adminmain.Show();
                             }
 
                         }
 
-                        
+
                     }
-                }
-                if (angemeldetadmin == true)
-                {
-                    this.Hide();
-                    Adminmain adminmain = new Adminmain();
-                    adminmain.Show();
-                }
-                else if(angemeldet == true)
-                {
-                    this.Hide();
-                    Usermain usermain = new Usermain();
-                    usermain.Show();
-                }
-                else
-                {
-                    MessageBox.Show("Falsche Anmelde daten", "FEHLER", MessageBoxButtons.OK);
 
                 }
+
                 sr.Close();
             }
             else
@@ -98,7 +108,13 @@ namespace GameLauncher
 
 
         }
-
+        private void tbxpasswort_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnLogin_Click(this, new EventArgs());
+            }
+        }
         private void btnregister_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -106,6 +122,6 @@ namespace GameLauncher
             register.Show();
         }
 
-   
+      
     }
 }

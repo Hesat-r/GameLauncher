@@ -53,5 +53,13 @@ namespace GameLauncher
         {
 
         }
+
+        private void dtpgeburtstag_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnRegister_Click(this, new EventArgs());
+            }
+        }
     }
 }

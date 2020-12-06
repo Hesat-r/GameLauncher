@@ -45,6 +45,7 @@
             this.lblspielehinzufuegen = new System.Windows.Forms.Label();
             this.btnspielepfad = new System.Windows.Forms.Button();
             this.tbxspielenamen = new System.Windows.Forms.TextBox();
+            this.tbxbeschreibung = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbxzurueck)).BeginInit();
             this.pnlspiellöschen.SuspendLayout();
             this.pnlspielehinzufuegen.SuspendLayout();
@@ -54,7 +55,7 @@
             // 
             this.lblLauncher.Font = new System.Drawing.Font("Paper Flowers", 100.75F);
             this.lblLauncher.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(198)))), ((int)(((byte)(199)))));
-            this.lblLauncher.Location = new System.Drawing.Point(355, 46);
+            this.lblLauncher.Location = new System.Drawing.Point(515, 45);
             this.lblLauncher.Name = "lblLauncher";
             this.lblLauncher.Size = new System.Drawing.Size(546, 136);
             this.lblLauncher.TabIndex = 11;
@@ -64,7 +65,7 @@
             // 
             this.lblgame.Font = new System.Drawing.Font("Paper Flowers", 100.75F);
             this.lblgame.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(50)))), ((int)(((byte)(37)))));
-            this.lblgame.Location = new System.Drawing.Point(172, 46);
+            this.lblgame.Location = new System.Drawing.Point(312, 45);
             this.lblgame.Name = "lblgame";
             this.lblgame.Size = new System.Drawing.Size(386, 136);
             this.lblgame.TabIndex = 10;
@@ -182,7 +183,7 @@
             this.pnlspielehinzufuegen.Controls.Add(this.lblspielehinzufuegen);
             this.pnlspielehinzufuegen.Controls.Add(this.btnspielepfad);
             this.pnlspielehinzufuegen.Controls.Add(this.tbxspielenamen);
-            this.pnlspielehinzufuegen.Location = new System.Drawing.Point(781, 194);
+            this.pnlspielehinzufuegen.Location = new System.Drawing.Point(781, 184);
             this.pnlspielehinzufuegen.Name = "pnlspielehinzufuegen";
             this.pnlspielehinzufuegen.Size = new System.Drawing.Size(284, 311);
             this.pnlspielehinzufuegen.TabIndex = 19;
@@ -240,6 +241,7 @@
             this.btnspielepfad.TabIndex = 14;
             this.btnspielepfad.Text = "Spielepfad";
             this.btnspielepfad.UseVisualStyleBackColor = false;
+            this.btnspielepfad.Click += new System.EventHandler(this.btnspielepfad_Click);
             // 
             // tbxspielenamen
             // 
@@ -255,12 +257,25 @@
             this.tbxspielenamen.Text = "spielename";
             this.tbxspielenamen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // tbxbeschreibung
+            // 
+            this.tbxbeschreibung.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
+            this.tbxbeschreibung.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.tbxbeschreibung.ForeColor = System.Drawing.Color.White;
+            this.tbxbeschreibung.Location = new System.Drawing.Point(418, 502);
+            this.tbxbeschreibung.Multiline = true;
+            this.tbxbeschreibung.Name = "tbxbeschreibung";
+            this.tbxbeschreibung.Size = new System.Drawing.Size(647, 258);
+            this.tbxbeschreibung.TabIndex = 20;
+            this.tbxbeschreibung.Text = "spielebeschreibung";
+            // 
             // Adminspiele
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
             this.ClientSize = new System.Drawing.Size(1115, 781);
+            this.Controls.Add(this.tbxbeschreibung);
             this.Controls.Add(this.pnlspielehinzufuegen);
             this.Controls.Add(this.lbxspiele);
             this.Controls.Add(this.pnlspiellöschen);
@@ -268,7 +283,6 @@
             this.Controls.Add(this.lblLauncher);
             this.Controls.Add(this.lblgame);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Adminspiele";
             this.Text = "Adminspiele";
             this.Load += new System.EventHandler(this.Adminspiele_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbxzurueck)).EndInit();
@@ -277,6 +291,7 @@
             this.pnlspielehinzufuegen.ResumeLayout(false);
             this.pnlspielehinzufuegen.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -298,5 +313,6 @@
         private System.Windows.Forms.TextBox tbxspielenamen;
         private System.Windows.Forms.TextBox tbxspielealter;
         private System.Windows.Forms.TextBox tbxspielealterhinzufuegen;
+        private System.Windows.Forms.TextBox tbxbeschreibung;
     }
 }
