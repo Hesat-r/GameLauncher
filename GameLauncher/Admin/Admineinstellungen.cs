@@ -57,5 +57,10 @@ namespace GameLauncher.Admin
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void pbxzeit_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("in Arbeit", "Fehler", MessageBoxButtons.OK);
+        }
     }
 }

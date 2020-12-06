@@ -103,6 +103,7 @@
             this.pbxzeit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxzeit.TabIndex = 10;
             this.pbxzeit.TabStop = false;
+            this.pbxzeit.Click += new System.EventHandler(this.pbxzeit_Click);
             // 
             // pnllog
             // 
