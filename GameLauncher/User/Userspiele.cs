@@ -19,7 +19,7 @@ namespace GameLauncher.User
         {
             InitializeComponent();
         }
-
+        //zurück button zum usermain
         private void pbxzurueck_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -28,17 +28,20 @@ namespace GameLauncher.User
         }
 
     
-       
+       //List strings
         public List<string> Name = new List<string>();
         public List<string> Pfad = new List<string>();
         public List<string> Alter = new List<string>();
         public List<string> beschreibung = new List<string>();
         public string benutzeralter;
       
-
+        
         private void btnspielstarten_Click(object sender, EventArgs e)
         {
+
+            
             int index = lbxspiele.SelectedIndex;
+            //benutzeralter wird in einer variablen gepackt
             if (File.Exists(@"alter.txt"))
             {
                 StreamReader sr = File.OpenText(@"alter.txt");
@@ -58,7 +61,7 @@ namespace GameLauncher.User
             }
             else
             {
-                
+                //spiel wird geöffnet von der csv datei
                 if (File.Exists(Pfad[index]))
                 {
                     Process spielstarten = new Process();
@@ -78,7 +81,7 @@ namespace GameLauncher.User
 
 
         }
-        
+        //spiele werden beim form öffnen in die listbox geladen
         private void Userspiele_Load(object sender, EventArgs e)
         {
             StreamReader sr = File.OpenText((@"Spiele.csv"));
@@ -101,12 +104,37 @@ namespace GameLauncher.User
             
             
         }
-
+        //beim auswählen ändert sich die spielebeschreibung / alter
         private void lbxspiele_SelectedIndexChanged(object sender, EventArgs e)
         {
             int index = lbxspiele.SelectedIndex;
             lblalterzahl.Text = Alter[index];
             lblspielebeschreibung.Text = beschreibung[index];
+        }
+        // LOG programm wurde bei userpsiele geschlossen 
+        private void pbxschließen_Click(object sender, EventArgs e)
+        {
+            if (File.Exists(@"log\" + DateTime.Now.Day + "." + DateTime.Now.Month + "." + DateTime.Now.Year + ".txt"))
+            {
+                StreamWriter sw = File.AppendText(@"log\" + DateTime.Now.Day + "." + DateTime.Now.Month + "." + DateTime.Now.Year + ".txt");
+
+                sw.WriteLine("Das Programm wurde am " + DateTime.Now.ToString("F") + " Am Userspielen Form Geschlossen");
+                sw.Close();
+            }
+            else
+            {
+
+                StreamWriter sw = new StreamWriter(@"log\" + DateTime.Now.Day + "." + DateTime.Now.Month + "." + DateTime.Now.Year + ".txt");
+                sw.WriteLine("Das Programm wurde am " + DateTime.Now.ToString("F") + " Am Userspielen Form Geschlossen");
+                sw.Close();
+            }
+
+            Application.Exit();
+        }
+
+        private void pbxminimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

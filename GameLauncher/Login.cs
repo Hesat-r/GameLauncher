@@ -23,7 +23,7 @@ namespace GameLauncher
         {
             InitializeComponent();
         }
-
+        // Alle bool Abfragen
         public bool angemeldet = false;
         public bool angemeldetadmin = false;
         public bool passwort = false;
@@ -34,7 +34,7 @@ namespace GameLauncher
         private void btnLogin_Click(object sender, EventArgs e)
         {
 
-
+            //Login abfrage
             if (File.Exists(@"Benutzer.csv"))
             {
                 StreamReader sr = File.OpenText((@"Benutzer.csv"));
@@ -47,10 +47,11 @@ namespace GameLauncher
 
                     if (tbxBenutzerLogin.Text == spalten[2])
                     {
+                        // benutzer richtig passwort wird abgefragt
                         benutzer = true;
                         if (tbxpasswort.Text == spalten[3])
                         {
-
+                            // passwort richtig alter.txt datei wird erstellt mit dem alter vom nuter
                             passwort = true;
                             MessageBox.Show("Erfolgreich eingelogt", "Erfolgreich", MessageBoxButtons.OK);
                             //alter.txt datei erstellen und alter vom eingeloggten benutzer in einer txt datei abspeichern
@@ -67,28 +68,29 @@ namespace GameLauncher
                                 sw.WriteLine(spalten[6]);
                                 sw.Close();
                             }
+                            // LOGIN LOG
+                            if (File.Exists(@"log\" + DateTime.Now.Day + "." + DateTime.Now.Month + "." + DateTime.Now.Year + ".txt"))
+                            {
+                                StreamWriter sw = File.AppendText(@"log\" + DateTime.Now.Day + "." + DateTime.Now.Month + "." + DateTime.Now.Year + ".txt");
 
+                                sw.WriteLine(spalten[2] + "hat sich um " + DateTime.Now.ToString("F") + " Eingeloggt");
+                                sw.Close();
+                            }
+                            else
+                            {
+
+                                StreamWriter sw = new StreamWriter(@"log\" + DateTime.Now.Day + "." + DateTime.Now.Month + "." + DateTime.Now.Year + ".txt");
+                                sw.WriteLine(spalten[2] + "hat sich um " + DateTime.Now.ToString("F") + " Eingeloggt");
+                                sw.Close();
+                            }
+                            // Rechte Abfrage
                             if (spalten[5] == "0" && benutzer == true && passwort == true)
                             {
                                 angemeldet = true;
-                                MessageBox.Show(spalten[6], "test", MessageBoxButtons.OK);
                                 this.Hide();
                                 Userspiele userspiele = new Userspiele();
                                 userspiele.Show();
-                                if (File.Exists(@"log\" + DateTime.Now.Day + "." + DateTime.Now.Month + "." + DateTime.Now.Year + ".txt"))
-                                {
-                                    StreamWriter sw = File.AppendText(@"log\" + DateTime.Now.Day + "." + DateTime.Now.Month + "." + DateTime.Now.Year + ".txt");
-
-                                    sw.WriteLine(spalten[2] + "hat sich um " + DateTime.Now.ToString("F") + " Eingeloggt");
-                                    sw.Close();
-                                }
-                                else
-                                {
-                                    
-                                    StreamWriter sw = new StreamWriter(@"log\" + DateTime.Now.Day + "." + DateTime.Now.Month + "." + DateTime.Now.Year + ".txt");
-                                    sw.WriteLine(spalten[2] + "hat sich um " + DateTime.Now.ToString("F") + " Eingeloggt");
-                                    sw.Close();
-                                }
+                               
                                
                             }
                             else if (spalten[5] == "1" && benutzer == true && passwort == true)
@@ -99,6 +101,7 @@ namespace GameLauncher
                                 Adminmain adminmain = new Adminmain();
                                 adminmain.Show();
                             }
+                           
 
                         }
 
@@ -122,6 +125,7 @@ namespace GameLauncher
 
 
         }
+        //Enter als button nutzen
         private void tbxpasswort_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -129,13 +133,37 @@ namespace GameLauncher
                 btnLogin_Click(this, new EventArgs());
             }
         }
+        //register wird geöffnet beim register button click
         private void btnregister_Click(object sender, EventArgs e)
         {
             this.Hide();
             Register register = new Register();
             register.Show();
         }
+        //Log das Login Geschlossen wurde
+        private void pbxschließen_Click(object sender, EventArgs e)
+        {
+            if (File.Exists(@"log\" + DateTime.Now.Day + "." + DateTime.Now.Month + "." + DateTime.Now.Year + ".txt"))
+            {
+                StreamWriter sw = File.AppendText(@"log\" + DateTime.Now.Day + "." + DateTime.Now.Month + "." + DateTime.Now.Year + ".txt");
 
-      
+                sw.WriteLine("jemand hat das Programm am " + DateTime.Now.ToString("F") + " beim Login Pannel Geschlossen");
+                sw.Close();
+            }
+            else
+            {
+
+                StreamWriter sw = new StreamWriter(@"log\" + DateTime.Now.Day + "." + DateTime.Now.Month + "." + DateTime.Now.Year + ".txt");
+                sw.WriteLine("jemand Hat das Programm am " + DateTime.Now.ToString("F") + " Beim Loggin Pannel Geschlossen");
+                sw.Close();
+            }
+
+            Application.Exit();
+        }
+        //minimizen
+        private void pbxminimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

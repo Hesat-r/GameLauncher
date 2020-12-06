@@ -17,6 +17,7 @@ namespace GameLauncher.Admin
         {
             InitializeComponent();
         }
+        //aray wird erstellt
         public List<string> Name = new List<string>();
         public List<string> Pfad = new List<string>();
         public List<string> Alter = new List<string>();
@@ -30,7 +31,7 @@ namespace GameLauncher.Admin
             Adminmain.Show();
         }
 
-       
+       //spiele werden zur listbox geladen
         private void Adminspiele_Load(object sender, EventArgs e)
         {
             StreamReader sr = File.OpenText((@"Spiele.csv"));
@@ -88,7 +89,7 @@ namespace GameLauncher.Admin
             }
 
         }
-
+        // spiel wird hinzugefügt
         private void btnspielhinzufuegne_Click(object sender, EventArgs e)
         {
             if (File.Exists(@"Spiele.csv"))
@@ -102,6 +103,7 @@ namespace GameLauncher.Admin
                 sw.Write(";");
                 sw.WriteLine(tbxbeschreibung.Text);
                 sw.Close();
+                MessageBox.Show("Spiel wurde hinzugefügt bitte verlasse kurz die seite und komm wieder um die spiele zu Aktualisieren", "ERFOLGREICH!", MessageBoxButtons.OK);
             }
             
             
@@ -112,9 +114,9 @@ namespace GameLauncher.Admin
             OpenFileDialog ofd = new OpenFileDialog();
             ofd.ShowDialog();
             ausgewählterpfad = ofd.FileName;
-            MessageBox.Show(ausgewählterpfad, "test", MessageBoxButtons.OK);
+            MessageBox.Show(ausgewählterpfad, "dein Pfad", MessageBoxButtons.OK);
         }
-
+        //das ausgewählte spiel wird ausgesucht
         private void lbxspiele_SelectedIndexChanged(object sender, EventArgs e)
         {
             int index = lbxspiele.SelectedIndex;
@@ -129,6 +131,31 @@ namespace GameLauncher.Admin
                 tbxspielenamenlöschen.Text = Name[index];
                 tbxspielealter.Text = Alter[index];
             }
+        }
+        // LOG SCHLIEßUNG
+        private void pbxschließen_Click(object sender, EventArgs e)
+        {
+            if (File.Exists(@"log\" + DateTime.Now.Day + "." + DateTime.Now.Month + "." + DateTime.Now.Year + ".txt"))
+            {
+                StreamWriter sw = File.AppendText(@"log\" + DateTime.Now.Day + "." + DateTime.Now.Month + "." + DateTime.Now.Year + ".txt");
+
+                sw.WriteLine("Das Programm wurde am " + DateTime.Now.ToString("F") + " am Adminspiele Form Geschlossen");
+                sw.Close();
+            }
+            else
+            {
+
+                StreamWriter sw = new StreamWriter(@"log\" + DateTime.Now.Day + "." + DateTime.Now.Month + "." + DateTime.Now.Year + ".txt");
+                sw.WriteLine("Das Programm wurde am " + DateTime.Now.ToString("F") + " am Adminspiele Form Geschlossen");
+                sw.Close();
+            }
+
+            Application.Exit();
+        }
+        //minimize
+        private void pbxminimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

@@ -43,6 +43,8 @@
             this.lbladminausloggen = new System.Windows.Forms.Label();
             this.lblgame = new System.Windows.Forms.Label();
             this.lblLauncher = new System.Windows.Forms.Label();
+            this.pbxminimize = new System.Windows.Forms.PictureBox();
+            this.pbxschließen = new System.Windows.Forms.PictureBox();
             this.pnladminspiele.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxadminspiele)).BeginInit();
             this.pnladminbenutzer.SuspendLayout();
@@ -51,6 +53,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbxadmineinstellung)).BeginInit();
             this.pnladminausloggen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxadminausloggen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxminimize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxschließen)).BeginInit();
             this.SuspendLayout();
             // 
             // pnladminspiele
@@ -58,7 +62,7 @@
             this.pnladminspiele.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pnladminspiele.Controls.Add(this.pbxadminspiele);
             this.pnladminspiele.Controls.Add(this.lbladminspiele);
-            this.pnladminspiele.Location = new System.Drawing.Point(55, 148);
+            this.pnladminspiele.Location = new System.Drawing.Point(71, 148);
             this.pnladminspiele.Name = "pnladminspiele";
             this.pnladminspiele.Size = new System.Drawing.Size(345, 332);
             this.pnladminspiele.TabIndex = 0;
@@ -92,7 +96,7 @@
             this.pnladminbenutzer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pnladminbenutzer.Controls.Add(this.pbxadminbenutzer);
             this.pnladminbenutzer.Controls.Add(this.lbladminbenutzer);
-            this.pnladminbenutzer.Location = new System.Drawing.Point(468, 148);
+            this.pnladminbenutzer.Location = new System.Drawing.Point(484, 148);
             this.pnladminbenutzer.Name = "pnladminbenutzer";
             this.pnladminbenutzer.Size = new System.Drawing.Size(345, 332);
             this.pnladminbenutzer.TabIndex = 1;
@@ -127,7 +131,7 @@
             this.pnladmineinstellung.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pnladmineinstellung.Controls.Add(this.pbxadmineinstellung);
             this.pnladmineinstellung.Controls.Add(this.lbladmineinstellung);
-            this.pnladmineinstellung.Location = new System.Drawing.Point(55, 497);
+            this.pnladmineinstellung.Location = new System.Drawing.Point(71, 497);
             this.pnladmineinstellung.Name = "pnladmineinstellung";
             this.pnladmineinstellung.Size = new System.Drawing.Size(345, 332);
             this.pnladmineinstellung.TabIndex = 1;
@@ -162,7 +166,7 @@
             this.pnladminausloggen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pnladminausloggen.Controls.Add(this.pbxadminausloggen);
             this.pnladminausloggen.Controls.Add(this.lbladminausloggen);
-            this.pnladminausloggen.Location = new System.Drawing.Point(468, 497);
+            this.pnladminausloggen.Location = new System.Drawing.Point(484, 497);
             this.pnladminausloggen.Name = "pnladminausloggen";
             this.pnladminausloggen.Size = new System.Drawing.Size(345, 332);
             this.pnladminausloggen.TabIndex = 3;
@@ -198,9 +202,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblgame.Font = new System.Drawing.Font("Paper Flowers", 99.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblgame.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(50)))), ((int)(((byte)(37)))));
-            this.lblgame.Location = new System.Drawing.Point(175, 12);
+            this.lblgame.Location = new System.Drawing.Point(141, 12);
             this.lblgame.Name = "lblgame";
-            this.lblgame.Size = new System.Drawing.Size(244, 136);
+            this.lblgame.Size = new System.Drawing.Size(260, 136);
             this.lblgame.TabIndex = 4;
             this.lblgame.Text = "Game";
             // 
@@ -210,11 +214,33 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblLauncher.Font = new System.Drawing.Font("Paper Flowers", 99.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLauncher.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(198)))), ((int)(((byte)(199)))));
-            this.lblLauncher.Location = new System.Drawing.Point(369, 9);
+            this.lblLauncher.Location = new System.Drawing.Point(321, 9);
             this.lblLauncher.Name = "lblLauncher";
-            this.lblLauncher.Size = new System.Drawing.Size(404, 136);
+            this.lblLauncher.Size = new System.Drawing.Size(420, 136);
             this.lblLauncher.TabIndex = 5;
             this.lblLauncher.Text = "Launcher";
+            // 
+            // pbxminimize
+            // 
+            this.pbxminimize.Image = ((System.Drawing.Image)(resources.GetObject("pbxminimize.Image")));
+            this.pbxminimize.Location = new System.Drawing.Point(731, 12);
+            this.pbxminimize.Name = "pbxminimize";
+            this.pbxminimize.Size = new System.Drawing.Size(64, 55);
+            this.pbxminimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxminimize.TabIndex = 24;
+            this.pbxminimize.TabStop = false;
+            this.pbxminimize.Click += new System.EventHandler(this.pbxminimize_Click);
+            // 
+            // pbxschließen
+            // 
+            this.pbxschließen.Image = ((System.Drawing.Image)(resources.GetObject("pbxschließen.Image")));
+            this.pbxschließen.Location = new System.Drawing.Point(801, 12);
+            this.pbxschließen.Name = "pbxschließen";
+            this.pbxschließen.Size = new System.Drawing.Size(64, 55);
+            this.pbxschließen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxschließen.TabIndex = 23;
+            this.pbxschließen.TabStop = false;
+            this.pbxschließen.Click += new System.EventHandler(this.pbxschließen_Click);
             // 
             // Adminmain
             // 
@@ -222,12 +248,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
             this.ClientSize = new System.Drawing.Size(877, 841);
+            this.Controls.Add(this.pbxminimize);
+            this.Controls.Add(this.pbxschließen);
             this.Controls.Add(this.lblLauncher);
             this.Controls.Add(this.lblgame);
             this.Controls.Add(this.pnladminausloggen);
             this.Controls.Add(this.pnladmineinstellung);
             this.Controls.Add(this.pnladminbenutzer);
             this.Controls.Add(this.pnladminspiele);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(893, 880);
             this.MinimumSize = new System.Drawing.Size(893, 880);
@@ -242,6 +271,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbxadmineinstellung)).EndInit();
             this.pnladminausloggen.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbxadminausloggen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxminimize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxschließen)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -262,5 +293,7 @@
         private System.Windows.Forms.Label lbladminausloggen;
         private System.Windows.Forms.Label lblgame;
         private System.Windows.Forms.Label lblLauncher;
+        private System.Windows.Forms.PictureBox pbxminimize;
+        private System.Windows.Forms.PictureBox pbxschließen;
     }
 }

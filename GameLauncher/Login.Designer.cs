@@ -39,10 +39,14 @@
             this.lblgame = new System.Windows.Forms.Label();
             this.lbllauncher = new System.Windows.Forms.Label();
             this.btnregister = new System.Windows.Forms.Button();
+            this.pbxminimize = new System.Windows.Forms.PictureBox();
+            this.pbxschließen = new System.Windows.Forms.PictureBox();
             this.pnlBenutzerLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxBenutzerLogin)).BeginInit();
             this.pnlpasswort.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxpasswort)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxminimize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxschließen)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlBenutzerLogin
@@ -164,12 +168,36 @@
             this.btnregister.UseVisualStyleBackColor = false;
             this.btnregister.Click += new System.EventHandler(this.btnregister_Click);
             // 
+            // pbxminimize
+            // 
+            this.pbxminimize.Image = ((System.Drawing.Image)(resources.GetObject("pbxminimize.Image")));
+            this.pbxminimize.Location = new System.Drawing.Point(600, 12);
+            this.pbxminimize.Name = "pbxminimize";
+            this.pbxminimize.Size = new System.Drawing.Size(64, 55);
+            this.pbxminimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxminimize.TabIndex = 13;
+            this.pbxminimize.TabStop = false;
+            this.pbxminimize.Click += new System.EventHandler(this.pbxminimize_Click);
+            // 
+            // pbxschließen
+            // 
+            this.pbxschließen.Image = ((System.Drawing.Image)(resources.GetObject("pbxschließen.Image")));
+            this.pbxschließen.Location = new System.Drawing.Point(670, 12);
+            this.pbxschließen.Name = "pbxschließen";
+            this.pbxschließen.Size = new System.Drawing.Size(64, 55);
+            this.pbxschließen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxschließen.TabIndex = 12;
+            this.pbxschließen.TabStop = false;
+            this.pbxschließen.Click += new System.EventHandler(this.pbxschließen_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
             this.ClientSize = new System.Drawing.Size(725, 693);
+            this.Controls.Add(this.pbxminimize);
+            this.Controls.Add(this.pbxschließen);
             this.Controls.Add(this.btnregister);
             this.Controls.Add(this.lbllauncher);
             this.Controls.Add(this.lblgame);
@@ -177,6 +205,7 @@
             this.Controls.Add(this.pnlpasswort);
             this.Controls.Add(this.pnlBenutzerLogin);
             this.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(741, 732);
             this.MinimumSize = new System.Drawing.Size(741, 732);
@@ -188,6 +217,8 @@
             this.pnlpasswort.ResumeLayout(false);
             this.pnlpasswort.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxpasswort)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxminimize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxschließen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,6 +236,8 @@
         private System.Windows.Forms.Label lblgame;
         private System.Windows.Forms.Label lbllauncher;
         private System.Windows.Forms.Button btnregister;
+        private System.Windows.Forms.PictureBox pbxminimize;
+        private System.Windows.Forms.PictureBox pbxschließen;
     }
 }
 

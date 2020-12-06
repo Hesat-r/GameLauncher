@@ -17,7 +17,7 @@ namespace GameLauncher.Admin
         {
             InitializeComponent();
         }
-
+        //adminbenutzerhinzufügen seite log
         private void Adminbenutzerhinzufügen_Load(object sender, EventArgs e)
         {
             if (File.Exists(@"log\" + DateTime.Now.Day + "." + DateTime.Now.Month + "." + DateTime.Now.Year + ".txt"))
@@ -35,14 +35,7 @@ namespace GameLauncher.Admin
                 sw.Close();
             }
         }
-
-        private void pbxzurueck_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Adminmain adminmain = new Adminmain();
-            adminmain.Show();
-        }
-
+        //benutzer erstellen
         private void btnbenutzererstellen_Click(object sender, EventArgs e)
         {
             int alter = DateTime.Today.Year - Convert.ToInt32(dtpgeburtstag.Value.Year);
@@ -63,6 +56,38 @@ namespace GameLauncher.Admin
             sw.Close();
 
 
+        }
+        //schließen log
+        private void pbxschließen_Click(object sender, EventArgs e)
+        {
+            if (File.Exists(@"log\" + DateTime.Now.Day + "." + DateTime.Now.Month + "." + DateTime.Now.Year + ".txt"))
+            {
+                StreamWriter sw = File.AppendText(@"log\" + DateTime.Now.Day + "." + DateTime.Now.Month + "." + DateTime.Now.Year + ".txt");
+
+                sw.WriteLine("Das Programm wurde am " + DateTime.Now.ToString("F") + " am Adminbenutzerhinzufügen Form Geschlossen");
+                sw.Close();
+            }
+            else
+            {
+
+                StreamWriter sw = new StreamWriter(@"log\" + DateTime.Now.Day + "." + DateTime.Now.Month + "." + DateTime.Now.Year + ".txt");
+                sw.WriteLine("Das Programm wurde am " + DateTime.Now.ToString("F") + " am Adminbenutzerhinzufügen Form Geschlossen");
+                sw.Close();
+            }
+
+            Application.Exit();
+        }
+        // minimize
+        private void pbxminimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void pbxzurueck_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            Adminmain adminmain = new Adminmain();
+            adminmain.Show();
         }
     }
 }

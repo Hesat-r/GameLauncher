@@ -37,10 +37,14 @@
             this.pnluserausloggen = new System.Windows.Forms.Panel();
             this.pbxuserausloggen = new System.Windows.Forms.PictureBox();
             this.lbluserausloggen = new System.Windows.Forms.Label();
+            this.pbxminimize = new System.Windows.Forms.PictureBox();
+            this.pbxschließen = new System.Windows.Forms.PictureBox();
             this.pnluserspielen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxuserspielen)).BeginInit();
             this.pnluserausloggen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxuserausloggen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxminimize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxschließen)).BeginInit();
             this.SuspendLayout();
             // 
             // lblLauncher
@@ -129,16 +133,41 @@
             this.lbluserausloggen.Text = "Ausloggen";
             this.lbluserausloggen.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pbxminimize
+            // 
+            this.pbxminimize.Image = ((System.Drawing.Image)(resources.GetObject("pbxminimize.Image")));
+            this.pbxminimize.Location = new System.Drawing.Point(747, 12);
+            this.pbxminimize.Name = "pbxminimize";
+            this.pbxminimize.Size = new System.Drawing.Size(64, 55);
+            this.pbxminimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxminimize.TabIndex = 24;
+            this.pbxminimize.TabStop = false;
+            this.pbxminimize.Click += new System.EventHandler(this.pbxminimize_Click);
+            // 
+            // pbxschließen
+            // 
+            this.pbxschließen.Image = ((System.Drawing.Image)(resources.GetObject("pbxschließen.Image")));
+            this.pbxschließen.Location = new System.Drawing.Point(817, 12);
+            this.pbxschließen.Name = "pbxschließen";
+            this.pbxschließen.Size = new System.Drawing.Size(64, 55);
+            this.pbxschließen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxschließen.TabIndex = 23;
+            this.pbxschließen.TabStop = false;
+            this.pbxschließen.Click += new System.EventHandler(this.pbxschließen_Click);
+            // 
             // Usermain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
-            this.ClientSize = new System.Drawing.Size(877, 633);
+            this.ClientSize = new System.Drawing.Size(893, 672);
+            this.Controls.Add(this.pbxminimize);
+            this.Controls.Add(this.pbxschließen);
             this.Controls.Add(this.pnluserausloggen);
             this.Controls.Add(this.pnluserspielen);
             this.Controls.Add(this.lblLauncher);
             this.Controls.Add(this.lblgame);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(893, 672);
             this.MinimumSize = new System.Drawing.Size(893, 672);
@@ -148,6 +177,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbxuserspielen)).EndInit();
             this.pnluserausloggen.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbxuserausloggen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxminimize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxschließen)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -162,5 +193,7 @@
         private System.Windows.Forms.Panel pnluserausloggen;
         private System.Windows.Forms.PictureBox pbxuserausloggen;
         private System.Windows.Forms.Label lbluserausloggen;
+        private System.Windows.Forms.PictureBox pbxminimize;
+        private System.Windows.Forms.PictureBox pbxschließen;
     }
 }

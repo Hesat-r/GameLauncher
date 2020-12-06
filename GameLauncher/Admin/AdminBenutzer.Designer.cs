@@ -37,10 +37,14 @@
             this.pnlzurueck = new System.Windows.Forms.Panel();
             this.lblzurueck = new System.Windows.Forms.Label();
             this.pbxzurueck = new System.Windows.Forms.PictureBox();
+            this.pbxminimize = new System.Windows.Forms.PictureBox();
+            this.pbxschließen = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbxbenutzerhinzufuegen)).BeginInit();
             this.pnlbenutzerhinzufuegen.SuspendLayout();
             this.pnlzurueck.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxzurueck)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxminimize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxschließen)).BeginInit();
             this.SuspendLayout();
             // 
             // lblLauncher
@@ -125,16 +129,41 @@
             this.pbxzurueck.TabStop = false;
             this.pbxzurueck.Click += new System.EventHandler(this.pbxzurueck_Click);
             // 
+            // pbxminimize
+            // 
+            this.pbxminimize.Image = ((System.Drawing.Image)(resources.GetObject("pbxminimize.Image")));
+            this.pbxminimize.Location = new System.Drawing.Point(628, 12);
+            this.pbxminimize.Name = "pbxminimize";
+            this.pbxminimize.Size = new System.Drawing.Size(64, 55);
+            this.pbxminimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxminimize.TabIndex = 24;
+            this.pbxminimize.TabStop = false;
+            this.pbxminimize.Click += new System.EventHandler(this.pbxminimize_Click);
+            // 
+            // pbxschließen
+            // 
+            this.pbxschließen.Image = ((System.Drawing.Image)(resources.GetObject("pbxschließen.Image")));
+            this.pbxschließen.Location = new System.Drawing.Point(698, 12);
+            this.pbxschließen.Name = "pbxschließen";
+            this.pbxschließen.Size = new System.Drawing.Size(64, 55);
+            this.pbxschließen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxschließen.TabIndex = 23;
+            this.pbxschließen.TabStop = false;
+            this.pbxschließen.Click += new System.EventHandler(this.pbxschließen_Click);
+            // 
             // AdminBenutzer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
             this.ClientSize = new System.Drawing.Size(774, 655);
+            this.Controls.Add(this.pbxminimize);
+            this.Controls.Add(this.pbxschließen);
             this.Controls.Add(this.pnlzurueck);
             this.Controls.Add(this.pnlbenutzerhinzufuegen);
             this.Controls.Add(this.lblLauncher);
             this.Controls.Add(this.lblgame);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AdminBenutzer";
             this.Text = "AdminBenutzer";
@@ -142,6 +171,8 @@
             this.pnlbenutzerhinzufuegen.ResumeLayout(false);
             this.pnlzurueck.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbxzurueck)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxminimize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxschließen)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -156,5 +187,7 @@
         private System.Windows.Forms.Panel pnlzurueck;
         private System.Windows.Forms.Label lblzurueck;
         private System.Windows.Forms.PictureBox pbxzurueck;
+        private System.Windows.Forms.PictureBox pbxminimize;
+        private System.Windows.Forms.PictureBox pbxschließen;
     }
 }

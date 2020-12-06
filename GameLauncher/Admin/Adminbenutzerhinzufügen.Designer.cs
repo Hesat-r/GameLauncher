@@ -34,10 +34,14 @@
             this.tbxbenutzername = new System.Windows.Forms.TextBox();
             this.tbxpasswort = new System.Windows.Forms.TextBox();
             this.btnbenutzererstellen = new System.Windows.Forms.Button();
-            this.pbxzurueck = new System.Windows.Forms.PictureBox();
             this.tbxvorname = new System.Windows.Forms.TextBox();
             this.tbxnachname = new System.Windows.Forms.TextBox();
             this.dtpgeburtstag = new System.Windows.Forms.DateTimePicker();
+            this.pbxminimize = new System.Windows.Forms.PictureBox();
+            this.pbxschließen = new System.Windows.Forms.PictureBox();
+            this.pbxzurueck = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxminimize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxschließen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxzurueck)).BeginInit();
             this.SuspendLayout();
             // 
@@ -104,18 +108,6 @@
             this.btnbenutzererstellen.UseVisualStyleBackColor = false;
             this.btnbenutzererstellen.Click += new System.EventHandler(this.btnbenutzererstellen_Click);
             // 
-            // pbxzurueck
-            // 
-            this.pbxzurueck.BackColor = System.Drawing.Color.Transparent;
-            this.pbxzurueck.Image = ((System.Drawing.Image)(resources.GetObject("pbxzurueck.Image")));
-            this.pbxzurueck.Location = new System.Drawing.Point(12, 12);
-            this.pbxzurueck.Name = "pbxzurueck";
-            this.pbxzurueck.Size = new System.Drawing.Size(93, 62);
-            this.pbxzurueck.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbxzurueck.TabIndex = 18;
-            this.pbxzurueck.TabStop = false;
-            this.pbxzurueck.Click += new System.EventHandler(this.pbxzurueck_Click);
-            // 
             // tbxvorname
             // 
             this.tbxvorname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
@@ -155,24 +147,63 @@
             this.dtpgeburtstag.Size = new System.Drawing.Size(200, 20);
             this.dtpgeburtstag.TabIndex = 19;
             // 
+            // pbxminimize
+            // 
+            this.pbxminimize.Image = ((System.Drawing.Image)(resources.GetObject("pbxminimize.Image")));
+            this.pbxminimize.Location = new System.Drawing.Point(824, 12);
+            this.pbxminimize.Name = "pbxminimize";
+            this.pbxminimize.Size = new System.Drawing.Size(64, 55);
+            this.pbxminimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxminimize.TabIndex = 24;
+            this.pbxminimize.TabStop = false;
+            this.pbxminimize.Click += new System.EventHandler(this.pbxminimize_Click);
+            // 
+            // pbxschließen
+            // 
+            this.pbxschließen.Image = ((System.Drawing.Image)(resources.GetObject("pbxschließen.Image")));
+            this.pbxschließen.Location = new System.Drawing.Point(894, 12);
+            this.pbxschließen.Name = "pbxschließen";
+            this.pbxschließen.Size = new System.Drawing.Size(64, 55);
+            this.pbxschließen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxschließen.TabIndex = 23;
+            this.pbxschließen.TabStop = false;
+            this.pbxschließen.Click += new System.EventHandler(this.pbxschließen_Click);
+            // 
+            // pbxzurueck
+            // 
+            this.pbxzurueck.Image = ((System.Drawing.Image)(resources.GetObject("pbxzurueck.Image")));
+            this.pbxzurueck.Location = new System.Drawing.Point(21, 12);
+            this.pbxzurueck.Name = "pbxzurueck";
+            this.pbxzurueck.Size = new System.Drawing.Size(75, 69);
+            this.pbxzurueck.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxzurueck.TabIndex = 25;
+            this.pbxzurueck.TabStop = false;
+            this.pbxzurueck.Click += new System.EventHandler(this.pbxzurueck_Click_1);
+            // 
             // Adminbenutzerhinzufügen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(16)))));
             this.ClientSize = new System.Drawing.Size(970, 638);
+            this.Controls.Add(this.pbxzurueck);
+            this.Controls.Add(this.pbxminimize);
+            this.Controls.Add(this.pbxschließen);
             this.Controls.Add(this.dtpgeburtstag);
             this.Controls.Add(this.tbxnachname);
             this.Controls.Add(this.tbxvorname);
-            this.Controls.Add(this.pbxzurueck);
             this.Controls.Add(this.btnbenutzererstellen);
             this.Controls.Add(this.tbxpasswort);
             this.Controls.Add(this.tbxbenutzername);
             this.Controls.Add(this.lblLauncher);
             this.Controls.Add(this.lblgame);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Adminbenutzerhinzufügen";
             this.Text = "Adminbenutzerhinzufügen";
             this.Load += new System.EventHandler(this.Adminbenutzerhinzufügen_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pbxminimize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxschließen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxzurueck)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -186,9 +217,11 @@
         private System.Windows.Forms.TextBox tbxbenutzername;
         private System.Windows.Forms.TextBox tbxpasswort;
         private System.Windows.Forms.Button btnbenutzererstellen;
-        private System.Windows.Forms.PictureBox pbxzurueck;
         private System.Windows.Forms.TextBox tbxvorname;
         private System.Windows.Forms.TextBox tbxnachname;
         private System.Windows.Forms.DateTimePicker dtpgeburtstag;
+        private System.Windows.Forms.PictureBox pbxminimize;
+        private System.Windows.Forms.PictureBox pbxschließen;
+        private System.Windows.Forms.PictureBox pbxzurueck;
     }
 }
